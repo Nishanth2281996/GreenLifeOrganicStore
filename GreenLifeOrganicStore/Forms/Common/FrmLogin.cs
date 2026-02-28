@@ -24,7 +24,7 @@ namespace GreenLifeOrganicStore
 
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
-            FrmForgotPassword frm = new FrmForgotPassword();
+            var frm = new FrmForgotPassword();
             frm.Show();
             this.Hide();
         }
@@ -36,9 +36,14 @@ namespace GreenLifeOrganicStore
 
         private void lblRegister_Click(object sender, EventArgs e)
         {
-            FrmRegister frm = new FrmRegister();
+            var frm = new FrmRegister();
             frm.Show();
             this.Hide();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
