@@ -16,5 +16,29 @@ namespace GreenLifeOrganicStore
         {
             InitializeComponent();
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblForgotPassword_Click(object sender, EventArgs e)
+        {
+            FrmForgotPassword frm = new FrmForgotPassword();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblRegister_Click(object sender, EventArgs e)
+        {
+            FrmRegister frm = new FrmRegister();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
