@@ -16,5 +16,12 @@ namespace GreenLifeOrganicStore
         {
             InitializeComponent();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmLogin();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
