@@ -15,6 +15,17 @@ namespace GreenLifeOrganicStore
         public FrmLogin()
         {
             InitializeComponent();
+         
+        }
+
+        private void FrmLogin_Shown(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void CenterCard()
+        {
+            
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)

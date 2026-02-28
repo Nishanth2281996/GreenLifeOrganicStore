@@ -46,6 +46,84 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Admin\FrmAdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmAdminMain.Designer.cs">
+      <DependentUpon>FrmAdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmOrderDetails.Designer.cs">
+      <DependentUpon>FrmOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmProductDetails.Designer.cs">
+      <DependentUpon>FrmProductDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminActivityLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminActivityLog.Designer.cs">
+      <DependentUpon>UcAdminActivityLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\ucAdminCategories.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\ucAdminCategories.Designer.cs">
+      <DependentUpon>ucAdminCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminCustomers.Designer.cs">
+      <DependentUpon>UcAdminCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\ucAdminDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\ucAdminDashboard.Designer.cs">
+      <DependentUpon>ucAdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminOrders.Designer.cs">
+      <DependentUpon>UcAdminOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminPayments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminPayments.Designer.cs">
+      <DependentUpon>UcAdminPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\ucAdminProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\ucAdminProducts.Designer.cs">
+      <DependentUpon>ucAdminProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminReports.Designer.cs">
+      <DependentUpon>UcAdminReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminSuppliers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Pages\UcAdminSuppliers.Designer.cs">
+      <DependentUpon>UcAdminSuppliers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Common\FrmForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +147,42 @@
     </Compile>
     <Compile Include="Forms\Common\FrmStart.Designer.cs">
       <DependentUpon>FrmStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FrmCustomerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FrmCustomerMain.Designer.cs">
+      <DependentUpon>FrmCustomerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\Pages\UcBrowseProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\Pages\UcBrowseProducts.Designer.cs">
+      <DependentUpon>UcBrowseProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\Pages\UcCartCheckout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\Pages\UcCartCheckout.Designer.cs">
+      <DependentUpon>UcCartCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\Pages\UcMyOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\Pages\UcMyOrders.Designer.cs">
+      <DependentUpon>UcMyOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\Pages\UcMyProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\Pages\UcMyProfile.Designer.cs">
+      <DependentUpon>UcMyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\Pages\UcOrderDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\Pages\UcOrderDetails.Designer.cs">
+      <DependentUpon>UcOrderDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,8 +222,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
-    <Folder Include="Forms\Admin\" />
-    <Folder Include="Forms\Customer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
