@@ -19,7 +19,7 @@ namespace GreenLifeOrganicStore
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+        
         }
 
         private void lblFooter_Click(object sender, EventArgs e)
