@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,11 +78,11 @@
     <Compile Include="Forms\Admin\Pages\UcAdminActivityLog.Designer.cs">
       <DependentUpon>UcAdminActivityLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin\Pages\ucAdminCategories.cs">
+    <Compile Include="Forms\Admin\Pages\UcAdminCategories.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\Pages\ucAdminCategories.Designer.cs">
-      <DependentUpon>ucAdminCategories.cs</DependentUpon>
+    <Compile Include="Forms\Admin\Pages\UcAdminCategories.Designer.cs">
+      <DependentUpon>UcAdminCategories.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Pages\UcAdminCustomers.cs">
       <SubType>UserControl</SubType>
@@ -88,11 +90,11 @@
     <Compile Include="Forms\Admin\Pages\UcAdminCustomers.Designer.cs">
       <DependentUpon>UcAdminCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin\Pages\ucAdminDashboard.cs">
+    <Compile Include="Forms\Admin\Pages\UcAdminDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\Pages\ucAdminDashboard.Designer.cs">
-      <DependentUpon>ucAdminDashboard.cs</DependentUpon>
+    <Compile Include="Forms\Admin\Pages\UcAdminDashboard.Designer.cs">
+      <DependentUpon>UcAdminDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Pages\UcAdminOrders.cs">
       <SubType>UserControl</SubType>
@@ -106,11 +108,11 @@
     <Compile Include="Forms\Admin\Pages\UcAdminPayments.Designer.cs">
       <DependentUpon>UcAdminPayments.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin\Pages\ucAdminProducts.cs">
+    <Compile Include="Forms\Admin\Pages\UcAdminProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\Pages\ucAdminProducts.Designer.cs">
-      <DependentUpon>ucAdminProducts.cs</DependentUpon>
+    <Compile Include="Forms\Admin\Pages\UcAdminProducts.Designer.cs">
+      <DependentUpon>UcAdminProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Pages\UcAdminReports.cs">
       <SubType>UserControl</SubType>
@@ -186,6 +188,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Admin\FrmAdminMain.resx">
+      <DependentUpon>FrmAdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Pages\UcAdminActivityLog.resx">
+      <DependentUpon>UcAdminActivityLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Pages\UcAdminDashboard.resx">
+      <DependentUpon>UcAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Common\FrmForgotPassword.resx">
       <DependentUpon>FrmForgotPassword.cs</DependentUpon>
     </EmbeddedResource>

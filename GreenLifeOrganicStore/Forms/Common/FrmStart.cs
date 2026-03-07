@@ -29,14 +29,14 @@ namespace GreenLifeOrganicStore
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var frm = new FrmLogin();
+            FrmLogin frm = new FrmLogin();
             frm.Show();
             this.Hide();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            var frm = new FrmRegister();
+            FrmRegister frm = new FrmRegister();
             frm.Show();
             this.Hide();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GreenLifeOrganicStore.Forms.Admin.Pages
 {
-    public partial class ucAdminCategories : UserControl
+    public partial class UcAdminCategories : UserControl
     {
-        public ucAdminCategories()
+        public UcAdminCategories()
         {
             InitializeComponent();
         }

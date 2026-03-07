@@ -1,6 +1,6 @@
 ﻿namespace GreenLifeOrganicStore.Forms.Admin.Pages
 {
-    partial class ucAdminProducts
+    partial class UcAdminProducts
     {
         /// <summary> 
         /// Required designer variable.

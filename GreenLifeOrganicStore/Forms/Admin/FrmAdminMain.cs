@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GreenLifeOrganicStore.Forms.Admin.Pages;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GreenLifeOrganicStore.Forms.Admin
 {
@@ -15,6 +17,58 @@ namespace GreenLifeOrganicStore.Forms.Admin
         public FrmAdminMain()
         {
             InitializeComponent();
+
+            //Load Dashboard page when the admin panel Starts
+            OpenAdminPage(new UcAdminDashboard(), "Dashboard");
+        }
+
+        //loads Usercontrol page into desktop panel
+        private void OpenAdminPage(UserControl Page, string pageTitle)
+        {
+            panelDesktop.Controls.Clear();
+            Page.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(Page);
+            lblPageTitle.Text = pageTitle;
+        }
+
+         private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            OpenAdminPage(new UcAdminDashboard(), "Dashboard");
+        }
+
+        private void lblSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            //Drop down Menu in Left Mouse click
+            cmsProfile.Show(btnAdmin, 0, btnAdmin.Height);
+
+
+        }
+
+       
+
+        private void lblAdminPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelSidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FrmAdminMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
