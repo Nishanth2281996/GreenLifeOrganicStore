@@ -33,7 +33,15 @@ namespace GreenLifeOrganicStore.Forms.Admin
 
          private void btnDashboard_Click(object sender, EventArgs e)
         {
+            //Dashboard Button Admin Panel 
             OpenAdminPage(new UcAdminDashboard(), "Dashboard");
+        }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            //Add Products Panel in Admin Panel
+            OpenAdminPage(new UcAdminProducts(), "Products");
+
         }
 
         private void lblSearch_Click(object sender, EventArgs e)
@@ -70,5 +78,7 @@ namespace GreenLifeOrganicStore.Forms.Admin
         {
 
         }
+
+       
     }
 }

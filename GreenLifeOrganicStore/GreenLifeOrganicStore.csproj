@@ -197,6 +197,9 @@
     <EmbeddedResource Include="Forms\Admin\Pages\UcAdminDashboard.resx">
       <DependentUpon>UcAdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Pages\UcAdminProducts.resx">
+      <DependentUpon>UcAdminProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Common\FrmForgotPassword.resx">
       <DependentUpon>FrmForgotPassword.cs</DependentUpon>
     </EmbeddedResource>

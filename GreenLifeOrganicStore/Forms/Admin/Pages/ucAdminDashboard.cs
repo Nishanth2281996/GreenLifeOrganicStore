@@ -64,6 +64,8 @@ namespace GreenLifeOrganicStore.Forms.Admin.Pages
 
         private void UcAdminDashboard_Load(object sender, EventArgs e)
         {
+
+            //Sample Data
             chartLowStockItems.Series.Clear();
 
             Series series = new Series("Low Stock");

@@ -342,7 +342,7 @@
             this.chartLowStockItems.Series.Add(series4);
             this.chartLowStockItems.Size = new System.Drawing.Size(615, 309);
             this.chartLowStockItems.TabIndex = 0;
-            this.chartLowStockItems.Text = "chart1";
+            this.chartLowStockItems.Text = "chartLowStock";
             this.chartLowStockItems.Click += new System.EventHandler(this.chartLowStockItems_Click);
             // 
             // panel5
@@ -396,7 +396,7 @@
             this.chartPendingOrders.Series.Add(series3);
             this.chartPendingOrders.Size = new System.Drawing.Size(615, 309);
             this.chartPendingOrders.TabIndex = 1;
-            this.chartPendingOrders.Text = "chart2";
+            this.chartPendingOrders.Text = "chartPendingOrders";
             this.chartPendingOrders.Click += new System.EventHandler(this.chartPendingOrders_Click);
             // 
             // lblNewCustomers
@@ -426,7 +426,7 @@
             this.chartNewCustomers.Series.Add(series2);
             this.chartNewCustomers.Size = new System.Drawing.Size(615, 310);
             this.chartNewCustomers.TabIndex = 1;
-            this.chartNewCustomers.Text = "chart3";
+            this.chartNewCustomers.Text = "chartNewCustomers";
             // 
             // panel7
             // 
@@ -479,7 +479,7 @@
             this.chartTotalFeedback.Series.Add(series1);
             this.chartTotalFeedback.Size = new System.Drawing.Size(615, 310);
             this.chartTotalFeedback.TabIndex = 2;
-            this.chartTotalFeedback.Text = "chart4";
+            this.chartTotalFeedback.Text = "chartTotalFeedback";
             this.chartTotalFeedback.Click += new System.EventHandler(this.chartTotalFeedback_Click);
             // 
             // UcAdminDashboard

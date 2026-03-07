@@ -248,6 +248,7 @@
             this.btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProducts.UseVisualStyleBackColor = true;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // btnDashboard
             // 
@@ -306,17 +307,16 @@
             // 
             // panelTopbar
             // 
-            this.panelTopbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTopbar.BackColor = System.Drawing.Color.White;
             this.panelTopbar.Controls.Add(this.panel1);
             this.panelTopbar.Controls.Add(this.btnAdmin);
             this.panelTopbar.Controls.Add(this.lblNotification);
             this.panelTopbar.Controls.Add(this.pictureBox1);
             this.panelTopbar.Controls.Add(this.lblPageTitle);
-            this.panelTopbar.Location = new System.Drawing.Point(0, 0);
+            this.panelTopbar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTopbar.Location = new System.Drawing.Point(223, 0);
             this.panelTopbar.Name = "panelTopbar";
-            this.panelTopbar.Size = new System.Drawing.Size(1184, 47);
+            this.panelTopbar.Size = new System.Drawing.Size(961, 50);
             this.panelTopbar.TabIndex = 1;
             // 
             // panel1
@@ -331,7 +331,7 @@
             this.btnAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdmin.BackColor = System.Drawing.Color.White;
             this.btnAdmin.ContextMenuStrip = this.cmsProfile;
-            this.btnAdmin.Location = new System.Drawing.Point(1031, 8);
+            this.btnAdmin.Location = new System.Drawing.Point(808, 8);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(90, 37);
             this.btnAdmin.TabIndex = 0;
@@ -367,7 +367,7 @@
             this.lblNotification.BackColor = System.Drawing.Color.Red;
             this.lblNotification.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotification.ForeColor = System.Drawing.Color.White;
-            this.lblNotification.Location = new System.Drawing.Point(993, 9);
+            this.lblNotification.Location = new System.Drawing.Point(770, 11);
             this.lblNotification.Name = "lblNotification";
             this.lblNotification.Size = new System.Drawing.Size(19, 21);
             this.lblNotification.TabIndex = 0;
@@ -377,7 +377,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(972, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(749, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -386,20 +386,24 @@
             // 
             // lblPageTitle
             // 
-            this.lblPageTitle.AutoSize = true;
-            this.lblPageTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPageTitle.Location = new System.Drawing.Point(21, 10);
+            this.lblPageTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPageTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPageTitle.Location = new System.Drawing.Point(0, 0);
             this.lblPageTitle.Name = "lblPageTitle";
-            this.lblPageTitle.Size = new System.Drawing.Size(101, 25);
+            this.lblPageTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPageTitle.Size = new System.Drawing.Size(961, 50);
             this.lblPageTitle.TabIndex = 0;
             this.lblPageTitle.Text = "Dashboard";
+            this.lblPageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelDesktop
             // 
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(223, 0);
+            this.panelDesktop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDesktop.Location = new System.Drawing.Point(223, 50);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(961, 724);
+            this.panelDesktop.Size = new System.Drawing.Size(961, 674);
             this.panelDesktop.TabIndex = 2;
             // 
             // FrmAdminMain
@@ -409,8 +413,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1184, 724);
-            this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTopbar);
+            this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelSidebar);
             this.Name = "FrmAdminMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
