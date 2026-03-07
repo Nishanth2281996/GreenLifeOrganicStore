@@ -38,24 +38,24 @@
             this.lblSupplierName = new System.Windows.Forms.Label();
             this.lblSupppierId = new System.Windows.Forms.Label();
             this.lblSupplierDetails = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtSupplierID = new System.Windows.Forms.TextBox();
+            this.dgvSupplierList = new System.Windows.Forms.DataGridView();
             this.panelSupplierList = new System.Windows.Forms.Panel();
             this.txtSearchbox = new System.Windows.Forms.TextBox();
             this.lblSupplierList = new System.Windows.Forms.Label();
-            this.dgvSupplierList = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitSupplier)).BeginInit();
             this.splitSupplier.Panel1.SuspendLayout();
             this.splitSupplier.Panel2.SuspendLayout();
             this.splitSupplier.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panelSupplierList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupplierList)).BeginInit();
+            this.panelSupplierList.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitSupplier
@@ -177,6 +177,23 @@
             this.lblSupplierDetails.TabIndex = 15;
             this.lblSupplierDetails.Text = "Supplier Details";
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.btnCancel, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnNew, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnDelete, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnEdit, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 509);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(258, 100);
+            this.tableLayoutPanel2.TabIndex = 17;
+            // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.SlateGray;
@@ -225,23 +242,6 @@
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.btnCancel, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnNew, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnDelete, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnEdit, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 509);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(258, 100);
-            this.tableLayoutPanel2.TabIndex = 17;
-            // 
             // txtAddress
             // 
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -264,6 +264,19 @@
             this.txtSupplierID.TabIndex = 16;
             this.txtSupplierID.Text = "Auto-generated";
             // 
+            // dgvSupplierList
+            // 
+            this.dgvSupplierList.AllowUserToDeleteRows = false;
+            this.dgvSupplierList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSupplierList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSupplierList.Location = new System.Drawing.Point(0, 56);
+            this.dgvSupplierList.Name = "dgvSupplierList";
+            this.dgvSupplierList.ReadOnly = true;
+            this.dgvSupplierList.RowHeadersWidth = 62;
+            this.dgvSupplierList.RowTemplate.Height = 28;
+            this.dgvSupplierList.Size = new System.Drawing.Size(1147, 590);
+            this.dgvSupplierList.TabIndex = 2;
+            // 
             // panelSupplierList
             // 
             this.panelSupplierList.BackColor = System.Drawing.Color.White;
@@ -281,7 +294,7 @@
             this.txtSearchbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearchbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchbox.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.txtSearchbox.Location = new System.Drawing.Point(599, 13);
+            this.txtSearchbox.Location = new System.Drawing.Point(557, 12);
             this.txtSearchbox.Name = "txtSearchbox";
             this.txtSearchbox.Size = new System.Drawing.Size(261, 31);
             this.txtSearchbox.TabIndex = 1;
@@ -296,19 +309,6 @@
             this.lblSupplierList.Size = new System.Drawing.Size(136, 30);
             this.lblSupplierList.TabIndex = 1;
             this.lblSupplierList.Text = "Supplier List";
-            // 
-            // dgvSupplierList
-            // 
-            this.dgvSupplierList.AllowUserToDeleteRows = false;
-            this.dgvSupplierList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSupplierList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSupplierList.Location = new System.Drawing.Point(0, 56);
-            this.dgvSupplierList.Name = "dgvSupplierList";
-            this.dgvSupplierList.ReadOnly = true;
-            this.dgvSupplierList.RowHeadersWidth = 62;
-            this.dgvSupplierList.RowTemplate.Height = 28;
-            this.dgvSupplierList.Size = new System.Drawing.Size(1147, 590);
-            this.dgvSupplierList.TabIndex = 2;
             // 
             // UcAdminSuppliers
             // 
@@ -326,9 +326,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitSupplier)).EndInit();
             this.splitSupplier.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplierList)).EndInit();
             this.panelSupplierList.ResumeLayout(false);
             this.panelSupplierList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplierList)).EndInit();
             this.ResumeLayout(false);
 
         }

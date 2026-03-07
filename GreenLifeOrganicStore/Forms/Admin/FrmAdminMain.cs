@@ -56,6 +56,12 @@ namespace GreenLifeOrganicStore.Forms.Admin
             OpenAdminPage(new UcAdminSuppliers(), "Supplier");
         }
 
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            //Add Customer User Control in Admin Panel
+            OpenAdminPage(new UcAdminCustomers(), "Customers");
+        }
+
 
 
         private void lblSearch_Click(object sender, EventArgs e)
@@ -93,6 +99,6 @@ namespace GreenLifeOrganicStore.Forms.Admin
 
         }
 
-        
+      
     }
 }

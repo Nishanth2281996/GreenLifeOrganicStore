@@ -197,8 +197,14 @@
     <EmbeddedResource Include="Forms\Admin\Pages\UcAdminCategories.resx">
       <DependentUpon>UcAdminCategories.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Pages\UcAdminCustomers.resx">
+      <DependentUpon>UcAdminCustomers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Pages\UcAdminDashboard.resx">
       <DependentUpon>UcAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Pages\UcAdminOrders.resx">
+      <DependentUpon>UcAdminOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Pages\UcAdminProducts.resx">
       <DependentUpon>UcAdminProducts.cs</DependentUpon>
