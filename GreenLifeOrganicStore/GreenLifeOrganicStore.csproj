@@ -72,12 +72,6 @@
     <Compile Include="Forms\Admin\FrmProductDetails.Designer.cs">
       <DependentUpon>FrmProductDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin\Pages\UcAdminActivityLog.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Admin\Pages\UcAdminActivityLog.Designer.cs">
-      <DependentUpon>UcAdminActivityLog.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Admin\Pages\UcAdminCategories.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,9 +185,6 @@
     <EmbeddedResource Include="Forms\Admin\FrmAdminMain.resx">
       <DependentUpon>FrmAdminMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\Pages\UcAdminActivityLog.resx">
-      <DependentUpon>UcAdminActivityLog.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Pages\UcAdminCategories.resx">
       <DependentUpon>UcAdminCategories.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,8 +197,14 @@
     <EmbeddedResource Include="Forms\Admin\Pages\UcAdminOrders.resx">
       <DependentUpon>UcAdminOrders.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Pages\UcAdminPayments.resx">
+      <DependentUpon>UcAdminPayments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Pages\UcAdminProducts.resx">
       <DependentUpon>UcAdminProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Pages\UcAdminReports.resx">
+      <DependentUpon>UcAdminReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Pages\UcAdminSuppliers.resx">
       <DependentUpon>UcAdminSuppliers.cs</DependentUpon>

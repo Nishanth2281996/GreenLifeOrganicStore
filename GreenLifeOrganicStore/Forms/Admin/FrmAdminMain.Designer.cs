@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminMain));
             this.panelSidebar = new System.Windows.Forms.Panel();
-            this.btnActivitylog = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnPayments = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
@@ -63,7 +62,6 @@
             // panelSidebar
             // 
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(0)))));
-            this.panelSidebar.Controls.Add(this.btnActivitylog);
             this.panelSidebar.Controls.Add(this.btnReports);
             this.panelSidebar.Controls.Add(this.btnPayments);
             this.panelSidebar.Controls.Add(this.btnOrders);
@@ -80,27 +78,6 @@
             this.panelSidebar.Size = new System.Drawing.Size(223, 724);
             this.panelSidebar.TabIndex = 0;
             this.panelSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSidebar_Paint);
-            // 
-            // btnActivitylog
-            // 
-            this.btnActivitylog.AutoSize = true;
-            this.btnActivitylog.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnActivitylog.FlatAppearance.BorderSize = 0;
-            this.btnActivitylog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActivitylog.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActivitylog.ForeColor = System.Drawing.Color.White;
-            this.btnActivitylog.Image = ((System.Drawing.Image)(resources.GetObject("btnActivitylog.Image")));
-            this.btnActivitylog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActivitylog.Location = new System.Drawing.Point(0, 615);
-            this.btnActivitylog.Name = "btnActivitylog";
-            this.btnActivitylog.Padding = new System.Windows.Forms.Padding(12);
-            this.btnActivitylog.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnActivitylog.Size = new System.Drawing.Size(223, 62);
-            this.btnActivitylog.TabIndex = 8;
-            this.btnActivitylog.Text = "   Activity log";
-            this.btnActivitylog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActivitylog.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnActivitylog.UseVisualStyleBackColor = true;
             // 
             // btnReports
             // 
@@ -122,6 +99,7 @@
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnPayments
             // 
@@ -143,6 +121,7 @@
             this.btnPayments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPayments.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPayments.UseVisualStyleBackColor = true;
+            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
             // btnOrders
             // 
@@ -164,6 +143,7 @@
             this.btnOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrders.UseVisualStyleBackColor = true;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click_1);
             // 
             // btnCustomers
             // 
@@ -447,10 +427,8 @@
         private System.Windows.Forms.ContextMenuStrip cmsProfile;
         private System.Windows.Forms.ToolStripMenuItem mnuChangePassword;
         private System.Windows.Forms.ToolStripMenuItem mnuLogout;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnActivitylog;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnPayments;
         private System.Windows.Forms.Button btnOrders;
@@ -460,6 +438,7 @@
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblAdminPanel;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelDesktop;
     }
 }

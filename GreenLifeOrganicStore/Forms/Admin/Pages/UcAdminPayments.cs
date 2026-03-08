@@ -16,5 +16,10 @@ namespace GreenLifeOrganicStore.Forms.Admin.Pages
         {
             InitializeComponent();
         }
+
+        private void panelPayment_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
