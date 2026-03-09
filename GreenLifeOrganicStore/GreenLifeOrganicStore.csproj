@@ -230,6 +230,9 @@
     <EmbeddedResource Include="Forms\Customer\Pages\UcCartCheckout.resx">
       <DependentUpon>UcCartCheckout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\Pages\UcMyOrders.resx">
+      <DependentUpon>UcMyOrders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -22,6 +22,7 @@ namespace GreenLifeOrganicStore.Forms.Customer
 
         private void OpenCustomerPage(UserControl Page)
         {
+
             panelDesktop.Controls.Clear();
             Page.Dock = DockStyle.Fill;
             panelDesktop.Controls.Add(Page);
@@ -30,12 +31,20 @@ namespace GreenLifeOrganicStore.Forms.Customer
 
         private void btnUser_Click(object sender, EventArgs e)
         {
+            // Add left Click to Nav bar
             cmsNav.Show(btnUser, 0, btnUser.Height);
         }
 
         private void btnCart_Click(object sender, EventArgs e)
         {
+            // Add Checkout User Control for Customer Panel 
             OpenCustomerPage(new UcCartCheckout());
+        }
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            //Add Orders User Control for Customer Panel 
+            OpenCustomerPage(new UcMyOrders());
         }
     }
 }
