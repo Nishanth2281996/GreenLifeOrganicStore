@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcCartCheckout));
             this.panelCartCard = new System.Windows.Forms.Panel();
             this.flpCartItems = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -63,13 +64,16 @@
             this.lblSummarySubtoal = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureProfilepic = new System.Windows.Forms.PictureBox();
             this.panelCartCard.SuspendLayout();
+            this.flpCartItems.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelDiscountCode.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProfilepic)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCartCard
@@ -91,6 +95,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpCartItems.AutoScroll = true;
+            this.flpCartItems.Controls.Add(this.pictureProfilepic);
             this.flpCartItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpCartItems.Location = new System.Drawing.Point(3, 109);
             this.flpCartItems.Name = "flpCartItems";
@@ -463,6 +468,18 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Order Summary";
             // 
+            // pictureProfilepic
+            // 
+            this.pictureProfilepic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureProfilepic.Image = ((System.Drawing.Image)(resources.GetObject("pictureProfilepic.Image")));
+            this.pictureProfilepic.Location = new System.Drawing.Point(3, 3);
+            this.pictureProfilepic.Name = "pictureProfilepic";
+            this.pictureProfilepic.Size = new System.Drawing.Size(128, 103);
+            this.pictureProfilepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureProfilepic.TabIndex = 1;
+            this.pictureProfilepic.TabStop = false;
+            this.pictureProfilepic.Click += new System.EventHandler(this.pictureProfilepic_Click);
+            // 
             // UcCartCheckout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -476,6 +493,7 @@
             this.Name = "UcCartCheckout";
             this.Size = new System.Drawing.Size(1114, 609);
             this.panelCartCard.ResumeLayout(false);
+            this.flpCartItems.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -488,6 +506,7 @@
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProfilepic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -529,5 +548,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCheckout;
+        private System.Windows.Forms.PictureBox pictureProfilepic;
     }
 }

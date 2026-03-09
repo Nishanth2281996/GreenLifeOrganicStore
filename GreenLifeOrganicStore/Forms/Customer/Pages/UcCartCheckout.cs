@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,6 +71,13 @@ namespace GreenLifeOrganicStore.Forms.Customer.Pages
         private void lblDiscountNumber_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureProfilepic_Click(object sender, EventArgs e)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddEllipse(0, 0, pictureProfilepic.Width, pictureProfilepic.Height);
+            pictureProfilepic.Region = new Region(path);
         }
     }
 }
