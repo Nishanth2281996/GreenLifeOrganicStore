@@ -221,6 +221,15 @@
     <EmbeddedResource Include="Forms\Common\FrmStart.resx">
       <DependentUpon>FrmStart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FrmCustomerMain.resx">
+      <DependentUpon>FrmCustomerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\Pages\UcBrowseProducts.resx">
+      <DependentUpon>UcBrowseProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\Pages\UcCartCheckout.resx">
+      <DependentUpon>UcCartCheckout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -15,6 +15,19 @@ namespace GreenLifeOrganicStore.Forms.Customer.Pages
         public UcBrowseProducts()
         {
             InitializeComponent();
+           
+        }
+
+       
+
+        private void flpProducts_Paint(object sender, PaintEventArgs e)
+        {
+        
+        }
+
+        private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

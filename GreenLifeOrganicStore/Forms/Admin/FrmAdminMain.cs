@@ -116,6 +116,9 @@ namespace GreenLifeOrganicStore.Forms.Admin
 
         }
 
-       
+        private void lblPageTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

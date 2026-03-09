@@ -378,6 +378,7 @@
             this.lblPageTitle.TabIndex = 0;
             this.lblPageTitle.Text = "Dashboard";
             this.lblPageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPageTitle.Click += new System.EventHandler(this.lblPageTitle_Click);
             // 
             // panelDesktop
             // 

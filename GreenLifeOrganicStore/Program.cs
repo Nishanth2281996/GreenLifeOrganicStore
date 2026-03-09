@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GreenLifeOrganicStore.Forms.Admin
+namespace GreenLifeOrganicStore.Forms.Customer
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace GreenLifeOrganicStore.Forms.Admin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAdminMain());
+            Application.Run(new FrmCustomerMain());
         }
     }
 }
