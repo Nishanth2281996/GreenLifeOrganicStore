@@ -233,6 +233,12 @@
     <EmbeddedResource Include="Forms\Customer\Pages\UcMyOrders.resx">
       <DependentUpon>UcMyOrders.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\Pages\UcMyProfile.resx">
+      <DependentUpon>UcMyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\Pages\UcOrderDetails.resx">
+      <DependentUpon>UcOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
