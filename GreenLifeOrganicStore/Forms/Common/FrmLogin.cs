@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GreenLifeOrganicStore.DAL;
 
 namespace GreenLifeOrganicStore
 {
@@ -60,6 +61,14 @@ namespace GreenLifeOrganicStore
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnTestConnection_Click(object sender, EventArgs e)
+        {
+            DbHelper dbHelper = new DbHelper();
+            string result = dbHelper.TestConnection();
+
+            MessageBox.Show(result, "Connection Test", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
