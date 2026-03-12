@@ -40,7 +40,6 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.TextBox();
-            this.btnTestConnection = new System.Windows.Forms.Button();
             this.panelCard.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
@@ -186,23 +185,12 @@
             this.lblHeader.TabStop = false;
             this.lblHeader.Text = "Login";
             // 
-            // btnTestConnection
-            // 
-            this.btnTestConnection.Location = new System.Drawing.Point(926, 228);
-            this.btnTestConnection.Name = "btnTestConnection";
-            this.btnTestConnection.Size = new System.Drawing.Size(271, 38);
-            this.btnTestConnection.TabIndex = 1;
-            this.btnTestConnection.Text = "TestConnection";
-            this.btnTestConnection.UseVisualStyleBackColor = true;
-            this.btnTestConnection.Click += new System.EventHandler(this.btnTestConnection_Click);
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1232, 749);
-            this.Controls.Add(this.btnTestConnection);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelCard);
             this.Name = "FrmLogin";
@@ -231,6 +219,5 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblForgotPassword;
         private System.Windows.Forms.Label lblRegister;
-        private System.Windows.Forms.Button btnTestConnection;
     }
 }

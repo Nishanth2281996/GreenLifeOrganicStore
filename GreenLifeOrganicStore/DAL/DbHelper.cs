@@ -9,7 +9,7 @@ namespace GreenLifeOrganicStore.DAL
 {
     public class DbHelper
     {
-        private readonly string connectionString =
+        private readonly string connectionString = 
             @"Server=NISHANTH\SQLEXPRESS;Database=GreenLifeOrganicStoreDB;Integrated Security=True;";
 
         public SqlConnection GetConnection()

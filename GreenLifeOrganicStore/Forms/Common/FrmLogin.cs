@@ -63,12 +63,6 @@ namespace GreenLifeOrganicStore
 
         }
 
-        private void btnTestConnection_Click(object sender, EventArgs e)
-        {
-            DbHelper dbHelper = new DbHelper();
-            string result = dbHelper.TestConnection();
-
-            MessageBox.Show(result, "Connection Test", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+      
     }
 }
