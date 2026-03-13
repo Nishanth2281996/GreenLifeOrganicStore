@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcAdminDashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelMonthlyRevenue = new System.Windows.Forms.Panel();
             this.lblTotalMonthlyRevenue = new System.Windows.Forms.Label();
@@ -123,6 +123,7 @@
             this.panelMonthlyRevenue.Name = "panelMonthlyRevenue";
             this.panelMonthlyRevenue.Size = new System.Drawing.Size(306, 122);
             this.panelMonthlyRevenue.TabIndex = 4;
+            this.panelMonthlyRevenue.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMonthlyRevenue_Paint);
             // 
             // lblTotalMonthlyRevenue
             // 
@@ -341,18 +342,18 @@
             // 
             // chartTotalFeedback
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartTotalFeedback.ChartAreas.Add(chartArea1);
+            chartArea5.Name = "ChartArea1";
+            this.chartTotalFeedback.ChartAreas.Add(chartArea5);
             this.chartTotalFeedback.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartTotalFeedback.Legends.Add(legend1);
+            legend5.Name = "Legend1";
+            this.chartTotalFeedback.Legends.Add(legend5);
             this.chartTotalFeedback.Location = new System.Drawing.Point(0, 0);
             this.chartTotalFeedback.Name = "chartTotalFeedback";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartTotalFeedback.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartTotalFeedback.Series.Add(series5);
             this.chartTotalFeedback.Size = new System.Drawing.Size(615, 310);
             this.chartTotalFeedback.TabIndex = 2;
             this.chartTotalFeedback.Text = "chartTotalFeedback";
@@ -382,18 +383,18 @@
             // 
             // chartNewCustomers
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartNewCustomers.ChartAreas.Add(chartArea2);
+            chartArea6.Name = "ChartArea1";
+            this.chartNewCustomers.ChartAreas.Add(chartArea6);
             this.chartNewCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chartNewCustomers.Legends.Add(legend2);
+            legend6.Name = "Legend1";
+            this.chartNewCustomers.Legends.Add(legend6);
             this.chartNewCustomers.Location = new System.Drawing.Point(0, 0);
             this.chartNewCustomers.Name = "chartNewCustomers";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartNewCustomers.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartNewCustomers.Series.Add(series6);
             this.chartNewCustomers.Size = new System.Drawing.Size(615, 310);
             this.chartNewCustomers.TabIndex = 1;
             this.chartNewCustomers.Text = "chartNewCustomers";
@@ -424,18 +425,18 @@
             // 
             // chartPendingOrders
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartPendingOrders.ChartAreas.Add(chartArea3);
+            chartArea7.Name = "ChartArea1";
+            this.chartPendingOrders.ChartAreas.Add(chartArea7);
             this.chartPendingOrders.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chartPendingOrders.Legends.Add(legend3);
+            legend7.Name = "Legend1";
+            this.chartPendingOrders.Legends.Add(legend7);
             this.chartPendingOrders.Location = new System.Drawing.Point(0, 0);
             this.chartPendingOrders.Name = "chartPendingOrders";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartPendingOrders.Series.Add(series3);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chartPendingOrders.Series.Add(series7);
             this.chartPendingOrders.Size = new System.Drawing.Size(615, 309);
             this.chartPendingOrders.TabIndex = 1;
             this.chartPendingOrders.Text = "chartPendingOrders";
@@ -465,18 +466,18 @@
             // 
             // chartLowStockItems
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartLowStockItems.ChartAreas.Add(chartArea4);
+            chartArea8.Name = "ChartArea1";
+            this.chartLowStockItems.ChartAreas.Add(chartArea8);
             this.chartLowStockItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chartLowStockItems.Legends.Add(legend4);
+            legend8.Name = "Legend1";
+            this.chartLowStockItems.Legends.Add(legend8);
             this.chartLowStockItems.Location = new System.Drawing.Point(0, 0);
             this.chartLowStockItems.Name = "chartLowStockItems";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartLowStockItems.Series.Add(series4);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chartLowStockItems.Series.Add(series8);
             this.chartLowStockItems.Size = new System.Drawing.Size(615, 309);
             this.chartLowStockItems.TabIndex = 0;
             this.chartLowStockItems.Text = "chartLowStock";

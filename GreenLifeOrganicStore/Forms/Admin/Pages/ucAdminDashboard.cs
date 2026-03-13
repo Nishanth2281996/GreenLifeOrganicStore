@@ -8,16 +8,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using GreenLifeOrganicStore.DAL;
 
 namespace GreenLifeOrganicStore.Forms.Admin.Pages
 {
     public partial class UcAdminDashboard : UserControl
     {
+
+        private readonly DashboardDAL dashboardDAL = new DashboardDAL();
         public UcAdminDashboard()
         {
             InitializeComponent();
-            this.Load += UcAdminDashboard_Load;
+            LoadDashboardData();
 
+        }
+
+        private void LoadDashboardData()
+        {
+            try
+            {
+                lblProductCount.Text = dashboardDAL.GetTotalProducts().ToString();
+                lblTotalOrdersCount.Text = dashboardDAL.GetTotalOrders().ToString();
+                lblTotalCustomersCount.Text = dashboardDAL.GetTotalCustomers().ToString();
+                lblTotalMonthlyRevenue.Text = dashboardDAL.GetTotalRevenue().ToString("0.00");
+            }
+
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Error loading dashboard data: " + ex.Message, "Dashboard Error", MessageBoxButtons.OK, MessageBoxIcon.
+                    Error);
+            }
         }
 
         private void openAdminPage(UserControl Page , string pageTitle) { }
@@ -65,20 +85,12 @@ namespace GreenLifeOrganicStore.Forms.Admin.Pages
         private void UcAdminDashboard_Load(object sender, EventArgs e)
         {
 
-            //Sample Data
-            chartLowStockItems.Series.Clear();
+    
+        }
 
-            Series series = new Series("Low Stock");
-            series.ChartType = SeriesChartType.Pie;
+        private void panelMonthlyRevenue_Paint(object sender, PaintEventArgs e)
+        {
 
-            series.Points.AddXY("Broccoli", 7);
-            series.Points.AddXY("Honey", 11);
-            series.Points.AddXY("Almonds", 16);
-            series.Points.AddXY("Quinoa", 18);
-            series.Points.AddXY("Yogurt", 22);
-            series.Points.AddXY("Spinach", 27);
-
-            chartLowStockItems.Series.Add(series);
         }
     }
 }
