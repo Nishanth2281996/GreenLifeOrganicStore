@@ -303,6 +303,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "FormRegister";
+            this.Load += new System.EventHandler(this.FrmRegister_Load);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.panelCard.ResumeLayout(false);

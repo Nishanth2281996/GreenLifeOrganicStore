@@ -114,6 +114,7 @@
             // lblForgotPassword
             // 
             this.lblForgotPassword.AutoSize = true;
+            this.lblForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblForgotPassword.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotPassword.Location = new System.Drawing.Point(43, 323);
             this.lblForgotPassword.Name = "lblForgotPassword";

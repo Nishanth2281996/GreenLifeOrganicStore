@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.panelMain = new System.Windows.Forms.Panel();
+            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.LblPassword = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnResetPassword = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblInstructions = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -43,23 +47,65 @@
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.White;
+            this.panelMain.Controls.Add(this.txtConfirmPassword);
+            this.panelMain.Controls.Add(this.lblConfirmPassword);
+            this.panelMain.Controls.Add(this.txtPassword);
+            this.panelMain.Controls.Add(this.LblPassword);
             this.panelMain.Controls.Add(this.btnCancel);
-            this.panelMain.Controls.Add(this.btnSubmit);
-            this.panelMain.Controls.Add(this.textBox1);
+            this.panelMain.Controls.Add(this.btnResetPassword);
+            this.panelMain.Controls.Add(this.txtEmail);
             this.panelMain.Controls.Add(this.lblEmail);
             this.panelMain.Controls.Add(this.lblInstructions);
             this.panelMain.Controls.Add(this.panel2);
             this.panelMain.Location = new System.Drawing.Point(138, 119);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(750, 377);
+            this.panelMain.Size = new System.Drawing.Size(750, 530);
             this.panelMain.TabIndex = 0;
+            // 
+            // txtConfirmPassword
+            // 
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPassword.Location = new System.Drawing.Point(67, 403);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '*';
+            this.txtConfirmPassword.Size = new System.Drawing.Size(628, 31);
+            this.txtConfirmPassword.TabIndex = 9;
+            // 
+            // lblConfirmPassword
+            // 
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.Location = new System.Drawing.Point(41, 356);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(180, 25);
+            this.lblConfirmPassword.TabIndex = 8;
+            this.lblConfirmPassword.Text = "Confirm Password : ";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(67, 311);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(628, 31);
+            this.txtPassword.TabIndex = 7;
+            // 
+            // LblPassword
+            // 
+            this.LblPassword.AutoSize = true;
+            this.LblPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPassword.Location = new System.Drawing.Point(41, 264);
+            this.LblPassword.Name = "LblPassword";
+            this.LblPassword.Size = new System.Drawing.Size(107, 25);
+            this.LblPassword.TabIndex = 6;
+            this.LblPassword.Text = "Password : ";
             // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.ForestGreen;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(395, 283);
+            this.btnCancel.Location = new System.Drawing.Point(395, 457);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(300, 51);
             this.btnCancel.TabIndex = 5;
@@ -67,25 +113,26 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnSubmit
+            // btnResetPassword
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(67, 283);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(300, 51);
-            this.btnSubmit.TabIndex = 4;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnResetPassword.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnResetPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetPassword.ForeColor = System.Drawing.Color.White;
+            this.btnResetPassword.Location = new System.Drawing.Point(67, 457);
+            this.btnResetPassword.Name = "btnResetPassword";
+            this.btnResetPassword.Size = new System.Drawing.Size(300, 51);
+            this.btnResetPassword.TabIndex = 4;
+            this.btnResetPassword.Text = "Submit";
+            this.btnResetPassword.UseVisualStyleBackColor = false;
+            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(67, 216);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(628, 31);
-            this.textBox1.TabIndex = 3;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(67, 216);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(628, 31);
+            this.txtEmail.TabIndex = 3;
             // 
             // lblEmail
             // 
@@ -106,7 +153,7 @@
             this.lblInstructions.Size = new System.Drawing.Size(653, 64);
             this.lblInstructions.TabIndex = 1;
             this.lblInstructions.Text = "Enter your registered email address below. If the email exists in our system, we " +
-    "will send you instructions to reset your password.";
+    "will reset your password.";
             // 
             // panel2
             // 
@@ -136,7 +183,8 @@
             this.ClientSize = new System.Drawing.Size(1108, 707);
             this.Controls.Add(this.panelMain);
             this.Name = "FrmForgotPassword";
-            this.Text = "FrmForgotPassword";
+            this.Text = "   ";
+            this.Load += new System.EventHandler(this.FrmForgotPassword_Load);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -153,7 +201,11 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnResetPassword;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtConfirmPassword;
+        private System.Windows.Forms.Label lblConfirmPassword;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label LblPassword;
     }
 }

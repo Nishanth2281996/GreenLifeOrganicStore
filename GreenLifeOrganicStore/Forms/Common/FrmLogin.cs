@@ -90,8 +90,8 @@ namespace GreenLifeOrganicStore
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
             //Show Forgot Password Page
-            FrmForgotPassword frm = new FrmForgotPassword();
-            frm.Show();
+            FrmForgotPassword forgotPasswordFrm = new FrmForgotPassword();
+            forgotPasswordFrm.Show();
             this.Hide();
         }
 

@@ -116,5 +116,29 @@ namespace GreenLifeOrganicStore.Services
             //Return true if admin was successfully created
             return rowsAffected > 0;
         }
+
+        //Reset the Password
+        public bool ResetPassword(string email , string newPassword)
+        {
+            //Check if email exists the database
+            if (!userDAL.EmailExists(email))
+            {
+                return false;
+            }
+
+            //declare variables to store the generated password and hash and salt
+            byte[] passwordHash;
+            byte[] passwordSalt;
+
+            //Create Hash and Salt for New Password
+            passwordHelper.CreatePasswordHash(newPassword, out passwordHash, out passwordSalt);
+
+            //Update the password in the database
+            int rowsAffected = userDAL.UpdatePassword(email, passwordHash, passwordSalt);
+
+            //If at least one row is updated , password reset was successfull
+            return rowsAffected > 0;
+
+        }
     }
 }

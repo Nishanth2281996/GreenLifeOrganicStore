@@ -138,6 +138,34 @@ namespace GreenLifeOrganicStore.DAL
                 }
             }
         }
+
+        public int UpdatePassword(string email, byte[] passwordHash, byte[] passwordSalt)
+        {
+            using (SqlConnection conn = dbHelper.GetConnection())
+            {
+
+                //Update user's password hash and salt using their email 
+                string query = @"UPDATE Users SET Password_Hash = @PasswordHash,
+                                                  Password_Salt = @PasswordSalt
+                                                  WHERE U_Email = @Email";
+
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@PasswordHash", passwordHash);
+                    cmd.Parameters.AddWithValue("@PasswordSalt", passwordSalt);
+                    cmd.Parameters.AddWithValue("@Email", email);
+
+                    conn.Open();
+
+                    return cmd.ExecuteNonQuery();
+
+
+                }
+
+            }
+
+        }
     }
     }
 

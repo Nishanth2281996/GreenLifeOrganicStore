@@ -41,8 +41,24 @@ namespace GreenLifeOrganicStore
             this.Hide();
         }
 
+        //Validate the Email Adderss Correct 
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
+
             //Get User inputs from Textboxes
             string fullName = txtFullName.Text.Trim();
             string email = txtEmail.Text.Trim();
@@ -51,6 +67,16 @@ namespace GreenLifeOrganicStore
             string city = txtCity.Text.Trim();
             string password = txtPassword.Text;
             string confirmPassword = txtConfirmPassword.Text;
+
+            //Validate the email address
+            if (!IsValidEmail(email))
+            {
+                MessageBox.Show("Please enter a valid email address.",
+                                "Validation Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return;
+            }
 
             //Check if any field Empty
             if (string.IsNullOrWhiteSpace(fullName) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(phone) ||
@@ -111,6 +137,11 @@ namespace GreenLifeOrganicStore
         }
 
         private void txtFullName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmRegister_Load(object sender, EventArgs e)
         {
 
         }
