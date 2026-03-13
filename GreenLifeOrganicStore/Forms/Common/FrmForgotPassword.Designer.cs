@@ -57,7 +57,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(395, 283);
             this.btnCancel.Name = "btnCancel";
@@ -70,7 +70,7 @@
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.Location = new System.Drawing.Point(67, 283);
             this.btnSubmit.Name = "btnSubmit";
@@ -81,25 +81,25 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(67, 216);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(628, 39);
+            this.textBox1.Size = new System.Drawing.Size(628, 31);
             this.textBox1.TabIndex = 3;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(41, 169);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(196, 32);
+            this.lblEmail.Size = new System.Drawing.Size(146, 25);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email Address : ";
             // 
             // lblInstructions
             // 
-            this.lblInstructions.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstructions.ForeColor = System.Drawing.Color.DimGray;
             this.lblInstructions.Location = new System.Drawing.Point(42, 94);
             this.lblInstructions.Name = "lblInstructions";

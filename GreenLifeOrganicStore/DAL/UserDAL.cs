@@ -116,5 +116,30 @@ namespace GreenLifeOrganicStore.DAL
                 }
             }
         }
+
+
+
+       public bool AdminExists()
+        {
+            using (SqlConnection conn = dbHelper.GetConnection())
+            {
+                //Count How many users have admin role
+                string query = "SELECT COUNT(*) FROM Users WHERE Role_id = @Role_id";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Role_id", 1);
+
+                    conn.Open();
+
+                    //Return true if at least one admin exists, otherwise false
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
     }
-}
+    }
+
+
+
