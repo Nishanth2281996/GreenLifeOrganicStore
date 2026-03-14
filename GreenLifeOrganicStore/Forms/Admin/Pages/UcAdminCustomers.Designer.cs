@@ -58,6 +58,8 @@
             this.txtSearchbox.Size = new System.Drawing.Size(261, 31);
             this.txtSearchbox.TabIndex = 1;
             this.txtSearchbox.Text = "   Search Customers";
+            this.txtSearchbox.Click += new System.EventHandler(this.txtSearchCustomer_Enter);
+            this.txtSearchbox.TextChanged += new System.EventHandler(this.txtSearchCustomer_TextChanged);
             // 
             // lblCustomerList
             // 
@@ -82,6 +84,7 @@
             this.dgvCustomers.RowTemplate.Height = 28;
             this.dgvCustomers.Size = new System.Drawing.Size(1274, 667);
             this.dgvCustomers.TabIndex = 2;
+            this.dgvCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellContentClick);
             // 
             // UcAdminCustomers
             // 
