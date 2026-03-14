@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panelProductList = new System.Windows.Forms.Panel();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.txtSearchbox = new System.Windows.Forms.TextBox();
             this.lblOrderList = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.panelProductList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
@@ -49,6 +49,16 @@
             this.panelProductList.Size = new System.Drawing.Size(1122, 56);
             this.panelProductList.TabIndex = 2;
             // 
+            // cmbStatus
+            // 
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Location = new System.Drawing.Point(585, 15);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(164, 28);
+            this.cmbStatus.TabIndex = 3;
+            this.cmbStatus.Text = "   All Status";
+            this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
+            // 
             // txtSearchbox
             // 
             this.txtSearchbox.BackColor = System.Drawing.Color.White;
@@ -60,6 +70,8 @@
             this.txtSearchbox.Size = new System.Drawing.Size(261, 31);
             this.txtSearchbox.TabIndex = 1;
             this.txtSearchbox.Text = "   Search Orders";
+            this.txtSearchbox.Click += new System.EventHandler(this.txtSearchOrder_Enter);
+            this.txtSearchbox.TextChanged += new System.EventHandler(this.txtSearchOrder_TextChanged);
             // 
             // lblOrderList
             // 
@@ -70,15 +82,6 @@
             this.lblOrderList.Size = new System.Drawing.Size(111, 30);
             this.lblOrderList.TabIndex = 1;
             this.lblOrderList.Text = "Order List";
-            // 
-            // cmbStatus
-            // 
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(585, 15);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(164, 28);
-            this.cmbStatus.TabIndex = 3;
-            this.cmbStatus.Text = "   All Status";
             // 
             // dgvOrders
             // 
