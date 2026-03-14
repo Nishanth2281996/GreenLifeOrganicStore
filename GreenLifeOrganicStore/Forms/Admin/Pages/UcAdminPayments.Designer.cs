@@ -29,26 +29,23 @@
         private void InitializeComponent()
         {
             this.panelMain = new System.Windows.Forms.Panel();
+            this.dgvPayments = new System.Windows.Forms.DataGridView();
             this.panelPaymentHistory = new System.Windows.Forms.Panel();
             this.lblPaymentHistory = new System.Windows.Forms.Label();
             this.panelPayment = new System.Windows.Forms.TableLayoutPanel();
-            this.panelPendingAmount = new System.Windows.Forms.Panel();
-            this.lblPendingAmount = new System.Windows.Forms.Label();
-            this.lblPendingTotalAmount = new System.Windows.Forms.Label();
             this.panelTotalPayments = new System.Windows.Forms.Panel();
             this.lblTotalPaymentsNumber = new System.Windows.Forms.Label();
             this.lblTotalPayments = new System.Windows.Forms.Label();
             this.panelCompletedAmount = new System.Windows.Forms.Panel();
             this.lblCompletedTotalAmount = new System.Windows.Forms.Label();
             this.lblCompletedAmount = new System.Windows.Forms.Label();
-            this.dgvPayments = new System.Windows.Forms.DataGridView();
+            this.btnDownload = new System.Windows.Forms.Button();
             this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
             this.panelPaymentHistory.SuspendLayout();
             this.panelPayment.SuspendLayout();
-            this.panelPendingAmount.SuspendLayout();
             this.panelTotalPayments.SuspendLayout();
             this.panelCompletedAmount.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
@@ -64,9 +61,24 @@
             this.panelMain.Size = new System.Drawing.Size(1322, 728);
             this.panelMain.TabIndex = 3;
             // 
+            // dgvPayments
+            // 
+            this.dgvPayments.AllowUserToAddRows = false;
+            this.dgvPayments.AllowUserToDeleteRows = false;
+            this.dgvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPayments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPayments.Location = new System.Drawing.Point(0, 187);
+            this.dgvPayments.Name = "dgvPayments";
+            this.dgvPayments.ReadOnly = true;
+            this.dgvPayments.RowHeadersWidth = 62;
+            this.dgvPayments.RowTemplate.Height = 28;
+            this.dgvPayments.Size = new System.Drawing.Size(1322, 541);
+            this.dgvPayments.TabIndex = 4;
+            // 
             // panelPaymentHistory
             // 
             this.panelPaymentHistory.BackColor = System.Drawing.Color.White;
+            this.panelPaymentHistory.Controls.Add(this.btnDownload);
             this.panelPaymentHistory.Controls.Add(this.lblPaymentHistory);
             this.panelPaymentHistory.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPaymentHistory.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,11 +100,10 @@
             // panelPayment
             // 
             this.panelPayment.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelPayment.ColumnCount = 3;
-            this.panelPayment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.panelPayment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.panelPayment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.panelPayment.Controls.Add(this.panelPendingAmount, 2, 0);
+            this.panelPayment.ColumnCount = 2;
+            this.panelPayment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelPayment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelPayment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.panelPayment.Controls.Add(this.panelTotalPayments, 0, 0);
             this.panelPayment.Controls.Add(this.panelCompletedAmount, 1, 0);
             this.panelPayment.Dock = System.Windows.Forms.DockStyle.Top;
@@ -104,38 +115,6 @@
             this.panelPayment.Size = new System.Drawing.Size(1322, 123);
             this.panelPayment.TabIndex = 2;
             // 
-            // panelPendingAmount
-            // 
-            this.panelPendingAmount.BackColor = System.Drawing.Color.White;
-            this.panelPendingAmount.Controls.Add(this.lblPendingAmount);
-            this.panelPendingAmount.Controls.Add(this.lblPendingTotalAmount);
-            this.panelPendingAmount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPendingAmount.Location = new System.Drawing.Point(883, 3);
-            this.panelPendingAmount.Name = "panelPendingAmount";
-            this.panelPendingAmount.Size = new System.Drawing.Size(436, 117);
-            this.panelPendingAmount.TabIndex = 2;
-            // 
-            // lblPendingAmount
-            // 
-            this.lblPendingAmount.AutoSize = true;
-            this.lblPendingAmount.BackColor = System.Drawing.Color.White;
-            this.lblPendingAmount.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingAmount.ForeColor = System.Drawing.Color.Orange;
-            this.lblPendingAmount.Location = new System.Drawing.Point(174, 56);
-            this.lblPendingAmount.Name = "lblPendingAmount";
-            this.lblPendingAmount.Size = new System.Drawing.Size(92, 38);
-            this.lblPendingAmount.TabIndex = 3;
-            this.lblPendingAmount.Text = "45000";
-            // 
-            // lblPendingTotalAmount
-            // 
-            this.lblPendingTotalAmount.AutoSize = true;
-            this.lblPendingTotalAmount.Location = new System.Drawing.Point(130, 18);
-            this.lblPendingTotalAmount.Name = "lblPendingTotalAmount";
-            this.lblPendingTotalAmount.Size = new System.Drawing.Size(174, 30);
-            this.lblPendingTotalAmount.TabIndex = 2;
-            this.lblPendingTotalAmount.Text = "Pending Amount";
-            // 
             // panelTotalPayments
             // 
             this.panelTotalPayments.BackColor = System.Drawing.Color.White;
@@ -144,7 +123,7 @@
             this.panelTotalPayments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTotalPayments.Location = new System.Drawing.Point(3, 3);
             this.panelTotalPayments.Name = "panelTotalPayments";
-            this.panelTotalPayments.Size = new System.Drawing.Size(434, 117);
+            this.panelTotalPayments.Size = new System.Drawing.Size(655, 117);
             this.panelTotalPayments.TabIndex = 0;
             // 
             // lblTotalPaymentsNumber
@@ -174,9 +153,9 @@
             this.panelCompletedAmount.Controls.Add(this.lblCompletedTotalAmount);
             this.panelCompletedAmount.Controls.Add(this.lblCompletedAmount);
             this.panelCompletedAmount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCompletedAmount.Location = new System.Drawing.Point(443, 3);
+            this.panelCompletedAmount.Location = new System.Drawing.Point(664, 3);
             this.panelCompletedAmount.Name = "panelCompletedAmount";
-            this.panelCompletedAmount.Size = new System.Drawing.Size(434, 117);
+            this.panelCompletedAmount.Size = new System.Drawing.Size(655, 117);
             this.panelCompletedAmount.TabIndex = 1;
             // 
             // lblCompletedTotalAmount
@@ -200,19 +179,19 @@
             this.lblCompletedAmount.TabIndex = 2;
             this.lblCompletedAmount.Text = "Completed Amount";
             // 
-            // dgvPayments
+            // btnDownload
             // 
-            this.dgvPayments.AllowUserToAddRows = false;
-            this.dgvPayments.AllowUserToDeleteRows = false;
-            this.dgvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPayments.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvPayments.Location = new System.Drawing.Point(0, 187);
-            this.dgvPayments.Name = "dgvPayments";
-            this.dgvPayments.ReadOnly = true;
-            this.dgvPayments.RowHeadersWidth = 62;
-            this.dgvPayments.RowTemplate.Height = 28;
-            this.dgvPayments.Size = new System.Drawing.Size(1322, 541);
-            this.dgvPayments.TabIndex = 4;
+            this.btnDownload.BackColor = System.Drawing.Color.DarkRed;
+            this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDownload.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnDownload.Location = new System.Drawing.Point(1067, 18);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(124, 36);
+            this.btnDownload.TabIndex = 5;
+            this.btnDownload.Text = "Download";
+            this.btnDownload.UseVisualStyleBackColor = false;
+            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
             // 
             // UcAdminPayments
             // 
@@ -222,16 +201,14 @@
             this.Name = "UcAdminPayments";
             this.Size = new System.Drawing.Size(1322, 728);
             this.panelMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).EndInit();
             this.panelPaymentHistory.ResumeLayout(false);
             this.panelPaymentHistory.PerformLayout();
             this.panelPayment.ResumeLayout(false);
-            this.panelPendingAmount.ResumeLayout(false);
-            this.panelPendingAmount.PerformLayout();
             this.panelTotalPayments.ResumeLayout(false);
             this.panelTotalPayments.PerformLayout();
             this.panelCompletedAmount.ResumeLayout(false);
             this.panelCompletedAmount.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -242,9 +219,6 @@
         private System.Windows.Forms.Panel panelPaymentHistory;
         private System.Windows.Forms.Label lblPaymentHistory;
         private System.Windows.Forms.TableLayoutPanel panelPayment;
-        private System.Windows.Forms.Panel panelPendingAmount;
-        private System.Windows.Forms.Label lblPendingAmount;
-        private System.Windows.Forms.Label lblPendingTotalAmount;
         private System.Windows.Forms.Panel panelTotalPayments;
         private System.Windows.Forms.Label lblTotalPaymentsNumber;
         private System.Windows.Forms.Label lblTotalPayments;
@@ -252,5 +226,6 @@
         private System.Windows.Forms.Label lblCompletedTotalAmount;
         private System.Windows.Forms.Label lblCompletedAmount;
         private System.Windows.Forms.DataGridView dgvPayments;
+        private System.Windows.Forms.Button btnDownload;
     }
 }

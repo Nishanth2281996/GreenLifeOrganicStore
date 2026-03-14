@@ -44,7 +44,7 @@
             this.cmbCategory.Size = new System.Drawing.Size(171, 28);
             this.cmbCategory.TabIndex = 1;
             this.cmbCategory.Text = "   All";
-            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
+           
             // 
             // lblCategory
             // 
@@ -87,7 +87,7 @@
             this.flpProducts.Name = "flpProducts";
             this.flpProducts.Size = new System.Drawing.Size(1306, 649);
             this.flpProducts.TabIndex = 2;
-            this.flpProducts.Paint += new System.Windows.Forms.PaintEventHandler(this.flpProducts_Paint);
+            
             // 
             // UcBrowseProducts
             // 

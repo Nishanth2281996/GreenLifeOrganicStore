@@ -120,5 +120,27 @@ namespace GreenLifeOrganicStore.Forms.Admin
         {
 
         }
+
+        private void mnuLogout_Click(object sender, EventArgs e)
+        {
+            // Ask for confirmation before logout
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to logout?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            // If admin clicks Yes, return to login form
+            if (result == DialogResult.Yes)
+            {
+                FrmLogin loginForm = new FrmLogin();
+                loginForm.Show();
+
+                // Hide current admin form
+                this.Hide();
+            }
+        }
     }
-}
+    }
+
+

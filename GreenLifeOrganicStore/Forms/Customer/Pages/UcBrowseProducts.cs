@@ -20,14 +20,6 @@ namespace GreenLifeOrganicStore.Forms.Customer.Pages
 
        
 
-        private void flpProducts_Paint(object sender, PaintEventArgs e)
-        {
         
-        }
-
-        private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

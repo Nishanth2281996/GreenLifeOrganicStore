@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GreenLifeOrganicStore.Services;
 
 namespace GreenLifeOrganicStore.Forms.Admin.Pages
 {
@@ -15,6 +16,7 @@ namespace GreenLifeOrganicStore.Forms.Admin.Pages
     {
         private readonly OrderDAL orderDAL = new OrderDAL();
 
+        private readonly PdfExportHelper pdfExportHelper = new PdfExportHelper();
         public UcAdminOrders()
         {
             InitializeComponent();
@@ -145,6 +147,41 @@ namespace GreenLifeOrganicStore.Forms.Admin.Pages
             {
                 txtSearchbox.Text = "";
                 txtSearchbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Open save dialog for PDF file
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "PDF Files (*.pdf)|*.pdf";
+                saveFileDialog.Title = "Save Orders Report";
+                saveFileDialog.FileName = "OrdersReport.pdf";
+
+                // If user selects a location, export the grid
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    pdfExportHelper.ExportDataGridViewToPdf(
+                        dgvOrders,
+                        saveFileDialog.FileName,
+                        "Orders Report");
+
+                    MessageBox.Show(
+                        "Orders report exported successfully.",
+                        "Success",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Error while exporting PDF: " + ex.Message,
+                    "Export Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
     }

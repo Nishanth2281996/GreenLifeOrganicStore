@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcCartCheckout));
             this.panelCartCard = new System.Windows.Forms.Panel();
             this.flpCartItems = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -64,16 +63,13 @@
             this.lblSummarySubtoal = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureProfilepic = new System.Windows.Forms.PictureBox();
             this.panelCartCard.SuspendLayout();
-            this.flpCartItems.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelDiscountCode.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureProfilepic)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCartCard
@@ -95,7 +91,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpCartItems.AutoScroll = true;
-            this.flpCartItems.Controls.Add(this.pictureProfilepic);
             this.flpCartItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpCartItems.Location = new System.Drawing.Point(3, 109);
             this.flpCartItems.Name = "flpCartItems";
@@ -241,7 +236,7 @@
             this.txtDiscountCode.Size = new System.Drawing.Size(249, 31);
             this.txtDiscountCode.TabIndex = 2;
             this.txtDiscountCode.Text = "   Enter Code";
-            this.txtDiscountCode.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            
             // 
             // label2
             // 
@@ -278,7 +273,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(423, 482);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+           
             // 
             // btnCheckout
             // 
@@ -290,7 +285,7 @@
             this.btnCheckout.TabIndex = 16;
             this.btnCheckout.Text = "Proceed to Checkout";
             this.btnCheckout.UseVisualStyleBackColor = false;
-            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+           
             // 
             // cmbCreditCard
             // 
@@ -300,7 +295,7 @@
             this.cmbCreditCard.Size = new System.Drawing.Size(358, 33);
             this.cmbCreditCard.TabIndex = 15;
             this.cmbCreditCard.Text = " Credit Card";
-            this.cmbCreditCard.SelectedIndexChanged += new System.EventHandler(this.cmbCreditCard_SelectedIndexChanged);
+           
             // 
             // lblPaymentMethod
             // 
@@ -311,7 +306,7 @@
             this.lblPaymentMethod.Size = new System.Drawing.Size(174, 25);
             this.lblPaymentMethod.TabIndex = 14;
             this.lblPaymentMethod.Text = "Payment Method : ";
-            this.lblPaymentMethod.Click += new System.EventHandler(this.lblPaymentMethod_Click);
+            
             // 
             // panel5
             // 
@@ -367,7 +362,7 @@
             this.lblDiscountNumber.Size = new System.Drawing.Size(49, 25);
             this.lblDiscountNumber.TabIndex = 9;
             this.lblDiscountNumber.Text = "-100";
-            this.lblDiscountNumber.Click += new System.EventHandler(this.lblDiscountNumber_Click);
+           
             // 
             // lblShippingNumber
             // 
@@ -377,7 +372,7 @@
             this.lblShippingNumber.Size = new System.Drawing.Size(47, 25);
             this.lblShippingNumber.TabIndex = 8;
             this.lblShippingNumber.Text = " 300";
-            this.lblShippingNumber.Click += new System.EventHandler(this.lblShippingNumber_Click);
+           
             // 
             // lblSubtotalNumber
             // 
@@ -387,7 +382,7 @@
             this.lblSubtotalNumber.Size = new System.Drawing.Size(52, 25);
             this.lblSubtotalNumber.TabIndex = 7;
             this.lblSubtotalNumber.Text = "1000";
-            this.lblSubtotalNumber.Click += new System.EventHandler(this.lblSubtotalNumber_Click);
+          
             // 
             // lblTotal
             // 
@@ -423,7 +418,7 @@
             this.lblDiscount.Size = new System.Drawing.Size(96, 25);
             this.lblDiscount.TabIndex = 3;
             this.lblDiscount.Text = "Discount : ";
-            this.lblDiscount.Click += new System.EventHandler(this.lblDiscount_Click);
+           
             // 
             // lblShipping
             // 
@@ -433,7 +428,7 @@
             this.lblShipping.Size = new System.Drawing.Size(97, 25);
             this.lblShipping.TabIndex = 2;
             this.lblShipping.Text = "Shipping : ";
-            this.lblShipping.Click += new System.EventHandler(this.lblShipping_Click);
+         
             // 
             // lblSummarySubtoal
             // 
@@ -443,7 +438,7 @@
             this.lblSummarySubtoal.Size = new System.Drawing.Size(93, 25);
             this.lblSummarySubtoal.TabIndex = 1;
             this.lblSummarySubtoal.Text = "Subtotal : ";
-            this.lblSummarySubtoal.Click += new System.EventHandler(this.lblSummarySubtoal_Click);
+          
             // 
             // panel3
             // 
@@ -468,18 +463,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Order Summary";
             // 
-            // pictureProfilepic
-            // 
-            this.pictureProfilepic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureProfilepic.Image = ((System.Drawing.Image)(resources.GetObject("pictureProfilepic.Image")));
-            this.pictureProfilepic.Location = new System.Drawing.Point(3, 3);
-            this.pictureProfilepic.Name = "pictureProfilepic";
-            this.pictureProfilepic.Size = new System.Drawing.Size(128, 103);
-            this.pictureProfilepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureProfilepic.TabIndex = 1;
-            this.pictureProfilepic.TabStop = false;
-            this.pictureProfilepic.Click += new System.EventHandler(this.pictureProfilepic_Click);
-            // 
             // UcCartCheckout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -492,8 +475,8 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UcCartCheckout";
             this.Size = new System.Drawing.Size(1114, 609);
+          
             this.panelCartCard.ResumeLayout(false);
-            this.flpCartItems.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -506,7 +489,6 @@
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureProfilepic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -548,6 +530,5 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCheckout;
-        private System.Windows.Forms.PictureBox pictureProfilepic;
     }
 }

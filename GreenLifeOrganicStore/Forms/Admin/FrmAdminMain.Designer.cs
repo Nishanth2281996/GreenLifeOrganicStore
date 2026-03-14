@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminMain));
             this.panelSidebar = new System.Windows.Forms.Panel();
-            this.btnReports = new System.Windows.Forms.Button();
             this.btnPayments = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
@@ -46,23 +45,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.cmsProfile = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mnuChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblNotification = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblPageTitle = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelSidebar.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelTopbar.SuspendLayout();
             this.cmsProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSidebar
             // 
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(0)))));
-            this.panelSidebar.Controls.Add(this.btnReports);
             this.panelSidebar.Controls.Add(this.btnPayments);
             this.panelSidebar.Controls.Add(this.btnOrders);
             this.panelSidebar.Controls.Add(this.btnCustomers);
@@ -78,28 +72,6 @@
             this.panelSidebar.Size = new System.Drawing.Size(223, 724);
             this.panelSidebar.TabIndex = 0;
             this.panelSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSidebar_Paint);
-            // 
-            // btnReports
-            // 
-            this.btnReports.AutoSize = true;
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.White;
-            this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
-            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(0, 553);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Padding = new System.Windows.Forms.Padding(12);
-            this.btnReports.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnReports.Size = new System.Drawing.Size(223, 62);
-            this.btnReports.TabIndex = 7;
-            this.btnReports.Text = "   Reports";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReports.UseVisualStyleBackColor = true;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnPayments
             // 
@@ -293,8 +265,6 @@
             this.panelTopbar.BackColor = System.Drawing.Color.White;
             this.panelTopbar.Controls.Add(this.panel1);
             this.panelTopbar.Controls.Add(this.btnAdmin);
-            this.panelTopbar.Controls.Add(this.lblNotification);
-            this.panelTopbar.Controls.Add(this.pictureBox1);
             this.panelTopbar.Controls.Add(this.lblPageTitle);
             this.panelTopbar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopbar.Location = new System.Drawing.Point(223, 0);
@@ -326,46 +296,17 @@
             // 
             this.cmsProfile.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.cmsProfile.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuChangePassword,
             this.mnuLogout});
             this.cmsProfile.Name = "cmsProfile";
-            this.cmsProfile.Size = new System.Drawing.Size(225, 68);
-            // 
-            // mnuChangePassword
-            // 
-            this.mnuChangePassword.Name = "mnuChangePassword";
-            this.mnuChangePassword.Size = new System.Drawing.Size(224, 32);
-            this.mnuChangePassword.Text = "Change Password";
+            this.cmsProfile.Size = new System.Drawing.Size(241, 69);
             // 
             // mnuLogout
             // 
+            this.mnuLogout.ForeColor = System.Drawing.Color.Red;
             this.mnuLogout.Name = "mnuLogout";
-            this.mnuLogout.Size = new System.Drawing.Size(224, 32);
+            this.mnuLogout.Size = new System.Drawing.Size(240, 32);
             this.mnuLogout.Text = "Logout";
-            // 
-            // lblNotification
-            // 
-            this.lblNotification.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblNotification.AutoSize = true;
-            this.lblNotification.BackColor = System.Drawing.Color.Red;
-            this.lblNotification.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotification.ForeColor = System.Drawing.Color.White;
-            this.lblNotification.Location = new System.Drawing.Point(770, 11);
-            this.lblNotification.Name = "lblNotification";
-            this.lblNotification.Size = new System.Drawing.Size(19, 21);
-            this.lblNotification.TabIndex = 0;
-            this.lblNotification.Text = "3";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(749, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
             // 
             // lblPageTitle
             // 
@@ -410,9 +351,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelTopbar.ResumeLayout(false);
-            this.panelTopbar.PerformLayout();
             this.cmsProfile.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,15 +361,11 @@
         private System.Windows.Forms.Panel panelSidebar;
         private System.Windows.Forms.Panel panelTopbar;
         private System.Windows.Forms.Label lblPageTitle;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblNotification;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.ContextMenuStrip cmsProfile;
-        private System.Windows.Forms.ToolStripMenuItem mnuChangePassword;
         private System.Windows.Forms.ToolStripMenuItem mnuLogout;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnPayments;
         private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.Button btnCustomers;
