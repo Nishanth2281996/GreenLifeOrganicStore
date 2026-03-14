@@ -41,6 +41,7 @@
             this.panelCategoryList = new System.Windows.Forms.Panel();
             this.txtSearchbox = new System.Windows.Forms.TextBox();
             this.lblCatgoryList = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitCategories)).BeginInit();
             this.splitCategories.Panel1.SuspendLayout();
             this.splitCategories.Panel2.SuspendLayout();
@@ -59,6 +60,7 @@
             // 
             // splitCategories.Panel1
             // 
+            this.splitCategories.Panel1.Controls.Add(this.btnCancel);
             this.splitCategories.Panel1.Controls.Add(this.btnDelete);
             this.splitCategories.Panel1.Controls.Add(this.btnUpdate);
             this.splitCategories.Panel1.Controls.Add(this.btnAdd);
@@ -83,7 +85,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnDelete.Location = new System.Drawing.Point(74, 316);
+            this.btnDelete.Location = new System.Drawing.Point(29, 316);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(116, 43);
             this.btnDelete.TabIndex = 6;
@@ -209,7 +211,6 @@
             this.txtSearchbox.Text = "   Search Categories";
             this.txtSearchbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSearchbox_MouseClick);
             this.txtSearchbox.TextChanged += new System.EventHandler(this.txtSearchbox_TextChanged);
-           
             // 
             // lblCatgoryList
             // 
@@ -220,6 +221,20 @@
             this.lblCatgoryList.Size = new System.Drawing.Size(144, 30);
             this.lblCatgoryList.TabIndex = 1;
             this.lblCatgoryList.Text = "Category List";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCancel.Location = new System.Drawing.Point(151, 316);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(116, 43);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // UcAdminCategories
             // 
@@ -256,5 +271,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

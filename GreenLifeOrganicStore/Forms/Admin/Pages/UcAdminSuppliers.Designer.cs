@@ -205,6 +205,7 @@
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnNew
             // 
@@ -215,8 +216,9 @@
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(123, 44);
             this.btnNew.TabIndex = 1;
-            this.btnNew.Text = "New";
+            this.btnNew.Text = "Add";
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnDelete
             // 
@@ -229,6 +231,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -241,6 +244,7 @@
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtAddress
             // 
@@ -266,6 +270,7 @@
             // 
             // dgvSupplierList
             // 
+            this.dgvSupplierList.AllowUserToAddRows = false;
             this.dgvSupplierList.AllowUserToDeleteRows = false;
             this.dgvSupplierList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSupplierList.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -276,6 +281,7 @@
             this.dgvSupplierList.RowTemplate.Height = 28;
             this.dgvSupplierList.Size = new System.Drawing.Size(1147, 590);
             this.dgvSupplierList.TabIndex = 2;
+            this.dgvSupplierList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplierList_CellClick);
             // 
             // panelSupplierList
             // 
@@ -299,6 +305,8 @@
             this.txtSearchbox.Size = new System.Drawing.Size(261, 31);
             this.txtSearchbox.TabIndex = 1;
             this.txtSearchbox.Text = "   Search Supplier";
+            this.txtSearchbox.Click += new System.EventHandler(this.txtSearchbox_Enter);
+            this.txtSearchbox.TextChanged += new System.EventHandler(this.txtSearchbox_TextChanged);
             // 
             // lblSupplierList
             // 
@@ -346,7 +354,6 @@
         private System.Windows.Forms.Label lblSupppierId;
         private System.Windows.Forms.Label lblSupplierDetails;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
@@ -356,5 +363,6 @@
         private System.Windows.Forms.Panel panelSupplierList;
         private System.Windows.Forms.TextBox txtSearchbox;
         private System.Windows.Forms.Label lblSupplierList;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
