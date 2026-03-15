@@ -29,23 +29,18 @@
         private void InitializeComponent()
         {
             this.panelCartCard = new System.Windows.Forms.Panel();
-            this.flpCartItems = new System.Windows.Forms.FlowLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblAction = new System.Windows.Forms.Label();
-            this.lblSubtotal = new System.Windows.Forms.Label();
-            this.lblProduct = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
+            this.dgvCart = new System.Windows.Forms.DataGridView();
+            this.colProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelCardTitle = new System.Windows.Forms.Label();
             this.panelCartLeft = new System.Windows.Forms.Panel();
-            this.panelDiscountCode = new System.Windows.Forms.Panel();
-            this.btnApply = new System.Windows.Forms.Button();
-            this.txtDiscountCode = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCheckout = new System.Windows.Forms.Button();
-            this.cmbCreditCard = new System.Windows.Forms.ComboBox();
+            this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
             this.lblPaymentMethod = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,9 +59,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelCartCard.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panelDiscountCode.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,103 +70,74 @@
             // 
             this.panelCartCard.BackColor = System.Drawing.Color.White;
             this.panelCartCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelCartCard.Controls.Add(this.flpCartItems);
-            this.panelCartCard.Controls.Add(this.tableLayoutPanel1);
+            this.panelCartCard.Controls.Add(this.dgvCart);
             this.panelCartCard.Controls.Add(this.panel1);
             this.panelCartCard.Controls.Add(this.panelCartLeft);
-            this.panelCartCard.Location = new System.Drawing.Point(3, 14);
+            this.panelCartCard.Location = new System.Drawing.Point(3, 21);
             this.panelCartCard.Name = "panelCartCard";
-            this.panelCartCard.Size = new System.Drawing.Size(646, 300);
+            this.panelCartCard.Size = new System.Drawing.Size(718, 300);
             this.panelCartCard.TabIndex = 0;
             // 
-            // flpCartItems
+            // dgvCart
             // 
-            this.flpCartItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flpCartItems.AutoScroll = true;
-            this.flpCartItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpCartItems.Location = new System.Drawing.Point(3, 109);
-            this.flpCartItems.Name = "flpCartItems";
-            this.flpCartItems.Size = new System.Drawing.Size(641, 190);
-            this.flpCartItems.TabIndex = 3;
-            this.flpCartItems.WrapContents = false;
+            this.dgvCart.AllowUserToAddRows = false;
+            this.dgvCart.AllowUserToDeleteRows = false;
+            this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colProductName,
+            this.colPrice,
+            this.colQuantity,
+            this.colSubtotal,
+            this.colAction});
+            this.dgvCart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCart.Location = new System.Drawing.Point(0, 52);
+            this.dgvCart.Name = "dgvCart";
+            this.dgvCart.ReadOnly = true;
+            this.dgvCart.RowHeadersWidth = 62;
+            this.dgvCart.RowTemplate.Height = 28;
+            this.dgvCart.Size = new System.Drawing.Size(716, 246);
+            this.dgvCart.TabIndex = 3;
+            this.dgvCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCart_CellContentClick);
             // 
-            // tableLayoutPanel1
+            // colProductName
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.94983F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.6935F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.37461F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.21739F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37793F));
-            this.tableLayoutPanel1.Controls.Add(this.lblAction, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblSubtotal, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblProduct, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblQuantity, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblPrice, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(-1, 72);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(646, 31);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.colProductName.HeaderText = "Product";
+            this.colProductName.MinimumWidth = 8;
+            this.colProductName.Name = "colProductName";
+            this.colProductName.ReadOnly = true;
+            this.colProductName.Width = 150;
             // 
-            // lblAction
+            // colPrice
             // 
-            this.lblAction.AutoSize = true;
-            this.lblAction.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAction.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAction.Location = new System.Drawing.Point(560, 0);
-            this.lblAction.Name = "lblAction";
-            this.lblAction.Size = new System.Drawing.Size(83, 31);
-            this.lblAction.TabIndex = 4;
-            this.lblAction.Text = "Action";
+            this.colPrice.HeaderText = "Price";
+            this.colPrice.MinimumWidth = 8;
+            this.colPrice.Name = "colPrice";
+            this.colPrice.ReadOnly = true;
+            this.colPrice.Width = 150;
             // 
-            // lblSubtotal
+            // colQuantity
             // 
-            this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotal.Location = new System.Drawing.Point(462, 0);
-            this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(92, 31);
-            this.lblSubtotal.TabIndex = 6;
-            this.lblSubtotal.Text = "Subtotal";
+            this.colQuantity.HeaderText = "Quantity";
+            this.colQuantity.MinimumWidth = 8;
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.ReadOnly = true;
+            this.colQuantity.Width = 150;
             // 
-            // lblProduct
+            // colSubtotal
             // 
-            this.lblProduct.AutoSize = true;
-            this.lblProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProduct.Location = new System.Drawing.Point(3, 0);
-            this.lblProduct.Name = "lblProduct";
-            this.lblProduct.Size = new System.Drawing.Size(220, 31);
-            this.lblProduct.TabIndex = 3;
-            this.lblProduct.Text = "Product";
+            this.colSubtotal.HeaderText = "Subtotal";
+            this.colSubtotal.MinimumWidth = 8;
+            this.colSubtotal.Name = "colSubtotal";
+            this.colSubtotal.ReadOnly = true;
+            this.colSubtotal.Width = 150;
             // 
-            // lblQuantity
+            // colAction
             // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(311, 0);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(145, 31);
-            this.lblQuantity.TabIndex = 5;
-            this.lblQuantity.Text = "Quantity";
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(229, 0);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(76, 31);
-            this.lblPrice.TabIndex = 3;
-            this.lblPrice.Text = "Price";
+            this.colAction.HeaderText = "Action";
+            this.colAction.MinimumWidth = 8;
+            this.colAction.Name = "colAction";
+            this.colAction.ReadOnly = true;
+            this.colAction.Width = 150;
             // 
             // panel1
             // 
@@ -181,7 +146,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(644, 52);
+            this.panel1.Size = new System.Drawing.Size(716, 52);
             this.panel1.TabIndex = 1;
             // 
             // labelCardTitle
@@ -203,57 +168,11 @@
             this.panelCartLeft.Size = new System.Drawing.Size(200, 100);
             this.panelCartLeft.TabIndex = 0;
             // 
-            // panelDiscountCode
-            // 
-            this.panelDiscountCode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelDiscountCode.BackColor = System.Drawing.Color.White;
-            this.panelDiscountCode.Controls.Add(this.btnApply);
-            this.panelDiscountCode.Controls.Add(this.txtDiscountCode);
-            this.panelDiscountCode.Controls.Add(this.label2);
-            this.panelDiscountCode.ForeColor = System.Drawing.Color.White;
-            this.panelDiscountCode.Location = new System.Drawing.Point(662, 15);
-            this.panelDiscountCode.Name = "panelDiscountCode";
-            this.panelDiscountCode.Size = new System.Drawing.Size(423, 91);
-            this.panelDiscountCode.TabIndex = 1;
-            // 
-            // btnApply
-            // 
-            this.btnApply.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnApply.ForeColor = System.Drawing.Color.White;
-            this.btnApply.Location = new System.Drawing.Point(291, 39);
-            this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(118, 37);
-            this.btnApply.TabIndex = 2;
-            this.btnApply.Text = "Apply";
-            this.btnApply.UseVisualStyleBackColor = false;
-            // 
-            // txtDiscountCode
-            // 
-            this.txtDiscountCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDiscountCode.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtDiscountCode.Location = new System.Drawing.Point(18, 45);
-            this.txtDiscountCode.Name = "txtDiscountCode";
-            this.txtDiscountCode.Size = new System.Drawing.Size(249, 31);
-            this.txtDiscountCode.TabIndex = 2;
-            this.txtDiscountCode.Text = "   Enter Code";
-            
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(13, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Discount Code : ";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.btnCheckout);
-            this.panel2.Controls.Add(this.cmbCreditCard);
+            this.panel2.Controls.Add(this.cmbPaymentMethod);
             this.panel2.Controls.Add(this.lblPaymentMethod);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.txtShippingAddress);
@@ -269,11 +188,10 @@
             this.panel2.Controls.Add(this.lblShipping);
             this.panel2.Controls.Add(this.lblSummarySubtoal);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(664, 115);
+            this.panel2.Location = new System.Drawing.Point(748, 21);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(423, 482);
+            this.panel2.Size = new System.Drawing.Size(359, 482);
             this.panel2.TabIndex = 2;
-           
             // 
             // btnCheckout
             // 
@@ -281,21 +199,20 @@
             this.btnCheckout.ForeColor = System.Drawing.Color.White;
             this.btnCheckout.Location = new System.Drawing.Point(18, 416);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(365, 41);
+            this.btnCheckout.Size = new System.Drawing.Size(326, 41);
             this.btnCheckout.TabIndex = 16;
             this.btnCheckout.Text = "Proceed to Checkout";
             this.btnCheckout.UseVisualStyleBackColor = false;
-           
+            this.btnCheckout.Click += new System.EventHandler(this.btnProceedCheckout_Click);
             // 
-            // cmbCreditCard
+            // cmbPaymentMethod
             // 
-            this.cmbCreditCard.FormattingEnabled = true;
-            this.cmbCreditCard.Location = new System.Drawing.Point(25, 366);
-            this.cmbCreditCard.Name = "cmbCreditCard";
-            this.cmbCreditCard.Size = new System.Drawing.Size(358, 33);
-            this.cmbCreditCard.TabIndex = 15;
-            this.cmbCreditCard.Text = " Credit Card";
-           
+            this.cmbPaymentMethod.FormattingEnabled = true;
+            this.cmbPaymentMethod.Location = new System.Drawing.Point(25, 366);
+            this.cmbPaymentMethod.Name = "cmbPaymentMethod";
+            this.cmbPaymentMethod.Size = new System.Drawing.Size(319, 33);
+            this.cmbPaymentMethod.TabIndex = 15;
+            this.cmbPaymentMethod.Text = "Select the payment Method";
             // 
             // lblPaymentMethod
             // 
@@ -306,7 +223,6 @@
             this.lblPaymentMethod.Size = new System.Drawing.Size(174, 25);
             this.lblPaymentMethod.TabIndex = 14;
             this.lblPaymentMethod.Text = "Payment Method : ";
-            
             // 
             // panel5
             // 
@@ -332,7 +248,7 @@
             this.txtShippingAddress.Location = new System.Drawing.Point(19, 223);
             this.txtShippingAddress.Multiline = true;
             this.txtShippingAddress.Name = "txtShippingAddress";
-            this.txtShippingAddress.Size = new System.Drawing.Size(364, 72);
+            this.txtShippingAddress.Size = new System.Drawing.Size(325, 72);
             this.txtShippingAddress.TabIndex = 12;
             // 
             // label3
@@ -362,7 +278,6 @@
             this.lblDiscountNumber.Size = new System.Drawing.Size(49, 25);
             this.lblDiscountNumber.TabIndex = 9;
             this.lblDiscountNumber.Text = "-100";
-           
             // 
             // lblShippingNumber
             // 
@@ -372,7 +287,6 @@
             this.lblShippingNumber.Size = new System.Drawing.Size(47, 25);
             this.lblShippingNumber.TabIndex = 8;
             this.lblShippingNumber.Text = " 300";
-           
             // 
             // lblSubtotalNumber
             // 
@@ -382,7 +296,6 @@
             this.lblSubtotalNumber.Size = new System.Drawing.Size(52, 25);
             this.lblSubtotalNumber.TabIndex = 7;
             this.lblSubtotalNumber.Text = "1000";
-          
             // 
             // lblTotal
             // 
@@ -418,7 +331,6 @@
             this.lblDiscount.Size = new System.Drawing.Size(96, 25);
             this.lblDiscount.TabIndex = 3;
             this.lblDiscount.Text = "Discount : ";
-           
             // 
             // lblShipping
             // 
@@ -428,7 +340,6 @@
             this.lblShipping.Size = new System.Drawing.Size(97, 25);
             this.lblShipping.TabIndex = 2;
             this.lblShipping.Text = "Shipping : ";
-         
             // 
             // lblSummarySubtoal
             // 
@@ -438,7 +349,6 @@
             this.lblSummarySubtoal.Size = new System.Drawing.Size(93, 25);
             this.lblSummarySubtoal.TabIndex = 1;
             this.lblSummarySubtoal.Text = "Subtotal : ";
-          
             // 
             // panel3
             // 
@@ -447,7 +357,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(423, 40);
+            this.panel3.Size = new System.Drawing.Size(359, 40);
             this.panel3.TabIndex = 0;
             // 
             // label1
@@ -470,19 +380,15 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panelDiscountCode);
             this.Controls.Add(this.panelCartCard);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UcCartCheckout";
-            this.Size = new System.Drawing.Size(1114, 609);
-          
+            this.Size = new System.Drawing.Size(1158, 609);
+            this.Load += new System.EventHandler(this.UcCartCheckout_Load);
             this.panelCartCard.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelDiscountCode.ResumeLayout(false);
-            this.panelDiscountCode.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -497,19 +403,8 @@
 
         private System.Windows.Forms.Panel panelCartCard;
         private System.Windows.Forms.Panel panelCartLeft;
-        private System.Windows.Forms.Panel panelDiscountCode;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelCardTitle;
-        private System.Windows.Forms.Label lblProduct;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblSubtotal;
-        private System.Windows.Forms.Label lblAction;
-        private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.FlowLayoutPanel flpCartItems;
-        private System.Windows.Forms.TextBox txtDiscountCode;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
@@ -525,10 +420,16 @@
         private System.Windows.Forms.Label lblTotalNumber;
         private System.Windows.Forms.TextBox txtShippingAddress;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbCreditCard;
+        private System.Windows.Forms.ComboBox cmbPaymentMethod;
         private System.Windows.Forms.Label lblPaymentMethod;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCheckout;
+        private System.Windows.Forms.DataGridView dgvCart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSubtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAction;
     }
 }

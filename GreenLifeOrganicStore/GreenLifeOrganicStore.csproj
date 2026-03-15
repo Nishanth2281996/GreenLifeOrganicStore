@@ -143,6 +143,7 @@
   <ItemGroup>
     <Compile Include="DAL\CartDAL.cs" />
     <Compile Include="DAL\CategoryDAL.cs" />
+    <Compile Include="DAL\CheckoutDAL.cs" />
     <Compile Include="DAL\CustomerDAL.cs" />
     <Compile Include="DAL\DashboardDAL.cs" />
     <Compile Include="DAL\DbHelper.cs" />

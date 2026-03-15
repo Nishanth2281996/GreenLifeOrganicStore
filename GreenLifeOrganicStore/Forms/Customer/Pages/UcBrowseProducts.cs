@@ -3,18 +3,20 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 
 namespace GreenLifeOrganicStore.Forms.Customer.Pages
 {
     public partial class UcBrowseProducts : UserControl
     {
+        private readonly DbHelper dbHelper = new DbHelper();
 
         // Store logged-in customer ID
         private readonly int customerId;
@@ -295,9 +297,18 @@ namespace GreenLifeOrganicStore.Forms.Customer.Pages
                     MessageBoxIcon.Error);
             }
         }
+
+       
+
+
+
+
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
            
     }
     }
 }
+
+
+

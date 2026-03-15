@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace GreenLifeOrganicStore.DAL
 {
@@ -156,6 +157,126 @@ namespace GreenLifeOrganicStore.DAL
 
                     conn.Open();
 
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        return Convert.ToInt32(result);
+                    }
+
+                    return 0;
+                }
+            }
+        }
+
+        // Load all cart rows for one customer
+        public DataTable GetCartItemsByUser(int userId)
+        {
+            using (SqlConnection conn = dbHelper.GetConnection())
+            {
+                string query = @"SELECT 
+                            c.Cart_id,
+                            c.Product_id,
+                            p.Product_Name,
+                            c.Unit_Price,
+                            c.Quantity,
+                            (c.Unit_Price * c.Quantity) AS Subtotal
+                         FROM Cart c
+                         INNER JOIN Products p ON c.Product_id = p.Product_id
+                         WHERE c.Users_id = @Users_id
+                         ORDER BY c.Cart_id DESC";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Safe parameter value
+                    cmd.Parameters.AddWithValue("@Users_id", userId);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+                        return table;
+                    }
+                }
+            }
+        }
+
+        // Remove one cart row
+        public bool RemoveCartItem(int cartId)
+        {
+            using (SqlConnection conn = dbHelper.GetConnection())
+            {
+                string query = @"DELETE FROM Cart
+                         WHERE Cart_id = @Cart_id";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Safe parameter value
+                    cmd.Parameters.AddWithValue("@Cart_id", cartId);
+
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        // Update quantity of a cart row
+        public bool UpdateCartQuantity(int cartId, int quantity)
+        {
+            using (SqlConnection conn = dbHelper.GetConnection())
+            {
+                string query = @"UPDATE Cart
+                         SET Quantity = @Quantity
+                         WHERE Cart_id = @Cart_id";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Safe parameter values
+                    cmd.Parameters.AddWithValue("@Quantity", quantity);
+                    cmd.Parameters.AddWithValue("@Cart_id", cartId);
+
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        // Load payment methods into ComboBox
+        public DataTable GetPaymentMethods()
+        {
+            using (SqlConnection conn = dbHelper.GetConnection())
+            {
+                string query = @"SELECT Payment_Method_id, Payment_Method
+                         FROM Payment_Method
+                         ORDER BY Payment_Method";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+                        return table;
+                    }
+                }
+            }
+        }
+
+        // Get product id from cart row
+        public int GetProductIdByCartId(int cartId)
+        {
+            using (SqlConnection conn = dbHelper.GetConnection())
+            {
+                string query = @"SELECT Product_id
+                         FROM Cart
+                         WHERE Cart_id = @Cart_id";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Safe parameter value
+                    cmd.Parameters.AddWithValue("@Cart_id", cartId);
+
+                    conn.Open();
                     object result = cmd.ExecuteScalar();
 
                     if (result != null)

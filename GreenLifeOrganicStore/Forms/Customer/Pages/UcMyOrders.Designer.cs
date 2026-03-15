@@ -51,6 +51,7 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1210, 688);
             this.panelMain.TabIndex = 0;
+            
             // 
             // flpAllOrders
             // 

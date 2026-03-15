@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GreenLifeOrganicStore.Forms.Customer
 {
@@ -23,14 +24,22 @@ namespace GreenLifeOrganicStore.Forms.Customer
 
         }
 
-        private void OpenCustomerPage(UserControl Page)
+        // Public method so other customer pages can request page changes
+        public void LoadCustomerPage(UserControl page)
+        {
+            panelDesktop.Controls.Clear();
+            page.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(page);
+        }
+
+        private void OpenCustomerPage(UserControl page)
         {
 
-            panelDesktop.Controls.Clear();
-            Page.Dock = DockStyle.Fill;
-            panelDesktop.Controls.Add(Page);
-           
+            LoadCustomerPage(page);
         }
+
+        // Internal helper for this form's own navigation buttons
+      
 
         private void btnUser_Click(object sender, EventArgs e)
         {
@@ -41,13 +50,13 @@ namespace GreenLifeOrganicStore.Forms.Customer
         private void btnCart_Click(object sender, EventArgs e)
         {
             // Add Checkout User Control for Customer Panel 
-            OpenCustomerPage(new UcCartCheckout());
+            OpenCustomerPage(new UcCartCheckout(customerId));
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
             //Add Orders User Control for Customer Panel 
-            OpenCustomerPage(new UcMyOrders());
+            OpenCustomerPage(new UcMyOrders(customerId));
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
@@ -55,5 +64,8 @@ namespace GreenLifeOrganicStore.Forms.Customer
             //Add Orders User Control for Customer Panel 
             OpenCustomerPage(new UcBrowseProducts(customerId));
         }
+
+       
     }
 }
+

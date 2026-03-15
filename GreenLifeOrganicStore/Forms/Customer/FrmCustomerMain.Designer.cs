@@ -83,19 +83,19 @@
             this.myProfileToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.cmsNav.Name = "cmsNav";
-            this.cmsNav.Size = new System.Drawing.Size(241, 101);
+            this.cmsNav.Size = new System.Drawing.Size(165, 68);
             // 
             // myProfileToolStripMenuItem
             // 
             this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
-            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(164, 32);
             this.myProfileToolStripMenuItem.Text = "My Profile";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(164, 32);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // lblHeader
@@ -247,6 +247,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCustomerMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
             this.panelTopbar.ResumeLayout(false);
             this.panelTopbar.PerformLayout();
             this.cmsNav.ResumeLayout(false);
