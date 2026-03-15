@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitCategories = new System.Windows.Forms.SplitContainer();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.panelCategoryList = new System.Windows.Forms.Panel();
             this.txtSearchbox = new System.Windows.Forms.TextBox();
             this.lblCatgoryList = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitCategories)).BeginInit();
             this.splitCategories.Panel1.SuspendLayout();
             this.splitCategories.Panel2.SuspendLayout();
@@ -78,6 +78,20 @@
             this.splitCategories.Size = new System.Drawing.Size(1240, 759);
             this.splitCategories.SplitterDistance = 300;
             this.splitCategories.TabIndex = 0;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCancel.Location = new System.Drawing.Point(151, 316);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(116, 43);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
@@ -185,6 +199,7 @@
             this.dgvCatagories.Size = new System.Drawing.Size(934, 701);
             this.dgvCatagories.TabIndex = 2;
             this.dgvCatagories.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCatagories_CellClick);
+            this.dgvCatagories.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCatagories_CellContentClick);
             // 
             // panelCategoryList
             // 
@@ -221,20 +236,6 @@
             this.lblCatgoryList.Size = new System.Drawing.Size(144, 30);
             this.lblCatgoryList.TabIndex = 1;
             this.lblCatgoryList.Text = "Category List";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Gray;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCancel.Location = new System.Drawing.Point(151, 316);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(116, 43);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // UcAdminCategories
             // 

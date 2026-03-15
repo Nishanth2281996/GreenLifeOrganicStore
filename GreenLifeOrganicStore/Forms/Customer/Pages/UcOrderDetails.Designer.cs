@@ -29,45 +29,56 @@
         private void InitializeComponent()
         {
             this.panelMain = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblOrderDetails = new System.Windows.Forms.Label();
-            this.lblArrow = new System.Windows.Forms.Label();
-            this.btnDelivered = new System.Windows.Forms.Button();
-            this.btnPaid = new System.Windows.Forms.Button();
+            this.lblReview = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblSubTotal = new System.Windows.Forms.Label();
+            this.lblShippping = new System.Windows.Forms.Label();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTotalSubTotal = new System.Windows.Forms.Label();
+            this.lblShippingCost = new System.Windows.Forms.Label();
+            this.lblTotalDiscount = new System.Windows.Forms.Label();
+            this.lblTotalAmount = new System.Windows.Forms.Label();
+            this.dgvOrderItems = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblCustomerName = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblPaymentMethod = new System.Windows.Forms.Label();
-            this.lblCustomerEmail = new System.Windows.Forms.Label();
-            this.lblCutomerID = new System.Windows.Forms.Label();
+            this.lblOrderItems = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblShipping = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.lblCustomerInformation = new System.Windows.Forms.Label();
             this.lblCustomerPhone = new System.Windows.Forms.Label();
             this.lblMethod = new System.Windows.Forms.Label();
             this.lblShippingAddress = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.lblShipping = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblOrderItems = new System.Windows.Forms.Label();
-            this.dgvOrderItems = new System.Windows.Forms.DataGridView();
-            this.lblTotalAmount = new System.Windows.Forms.Label();
-            this.lblTotalDiscount = new System.Windows.Forms.Label();
-            this.lblShippingCost = new System.Windows.Forms.Label();
-            this.lblTotalSubTotal = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblDiscount = new System.Windows.Forms.Label();
-            this.lblShippping = new System.Windows.Forms.Label();
-            this.lblSubTotal = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblCutomerID = new System.Windows.Forms.Label();
+            this.lblCustomerEmail = new System.Windows.Forms.Label();
+            this.lblPaymentMethod = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCustomerName = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPaid = new System.Windows.Forms.Button();
+            this.btnDelivered = new System.Windows.Forms.Button();
+            this.lblArrow = new System.Windows.Forms.Label();
+            this.lblOrderDetails = new System.Windows.Forms.Label();
+            this.cmbProduct = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panelMain.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
             // 
+            this.panelMain.AutoScroll = true;
+            this.panelMain.Controls.Add(this.comboBox1);
+            this.panelMain.Controls.Add(this.btnSubmit);
+            this.panelMain.Controls.Add(this.textBox1);
+            this.panelMain.Controls.Add(this.cmbProduct);
+            this.panelMain.Controls.Add(this.lblReview);
             this.panelMain.Controls.Add(this.panel3);
             this.panelMain.Controls.Add(this.lblSubTotal);
             this.panelMain.Controls.Add(this.lblShippping);
@@ -86,70 +97,121 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1276, 984);
             this.panelMain.TabIndex = 0;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
-            // panel1
+            // lblReview
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.btnPaid);
-            this.panel1.Controls.Add(this.btnDelivered);
-            this.panel1.Controls.Add(this.lblArrow);
-            this.panel1.Controls.Add(this.lblOrderDetails);
-            this.panel1.Location = new System.Drawing.Point(133, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1028, 297);
-            this.panel1.TabIndex = 0;
+            this.lblReview.AutoSize = true;
+            this.lblReview.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReview.Location = new System.Drawing.Point(61, 754);
+            this.lblReview.Name = "lblReview";
+            this.lblReview.Size = new System.Drawing.Size(300, 28);
+            this.lblReview.TabIndex = 15;
+            this.lblReview.Text = "Review your Purchase Product";
             // 
-            // lblOrderDetails
+            // panel3
             // 
-            this.lblOrderDetails.AutoSize = true;
-            this.lblOrderDetails.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderDetails.Location = new System.Drawing.Point(392, 12);
-            this.lblOrderDetails.Name = "lblOrderDetails";
-            this.lblOrderDetails.Size = new System.Drawing.Size(151, 30);
-            this.lblOrderDetails.TabIndex = 0;
-            this.lblOrderDetails.Text = "Order Details";
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(877, 723);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(260, 3);
+            this.panel3.TabIndex = 14;
             // 
-            // lblArrow
+            // lblSubTotal
             // 
-            this.lblArrow.AutoSize = true;
-            this.lblArrow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArrow.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblArrow.Location = new System.Drawing.Point(3, 12);
-            this.lblArrow.Name = "lblArrow";
-            this.lblArrow.Size = new System.Drawing.Size(77, 25);
-            this.lblArrow.TabIndex = 1;
-            this.lblArrow.Text = "⬅ Back";
+            this.lblSubTotal.AutoSize = true;
+            this.lblSubTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTotal.Location = new System.Drawing.Point(872, 643);
+            this.lblSubTotal.Name = "lblSubTotal";
+            this.lblSubTotal.Size = new System.Drawing.Size(94, 25);
+            this.lblSubTotal.TabIndex = 13;
+            this.lblSubTotal.Text = "SubTotal : ";
             // 
-            // btnDelivered
+            // lblShippping
             // 
-            this.btnDelivered.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnDelivered.FlatAppearance.BorderSize = 0;
-            this.btnDelivered.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelivered.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelivered.ForeColor = System.Drawing.Color.White;
-            this.btnDelivered.Location = new System.Drawing.Point(745, 6);
-            this.btnDelivered.Name = "btnDelivered";
-            this.btnDelivered.Size = new System.Drawing.Size(116, 36);
-            this.btnDelivered.TabIndex = 2;
-            this.btnDelivered.Text = "Delivered";
-            this.btnDelivered.UseVisualStyleBackColor = false;
+            this.lblShippping.AutoSize = true;
+            this.lblShippping.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShippping.Location = new System.Drawing.Point(872, 668);
+            this.lblShippping.Name = "lblShippping";
+            this.lblShippping.Size = new System.Drawing.Size(97, 25);
+            this.lblShippping.TabIndex = 12;
+            this.lblShippping.Text = "Shipping : ";
             // 
-            // btnPaid
+            // lblDiscount
             // 
-            this.btnPaid.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnPaid.FlatAppearance.BorderSize = 0;
-            this.btnPaid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaid.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaid.ForeColor = System.Drawing.Color.White;
-            this.btnPaid.Location = new System.Drawing.Point(881, 6);
-            this.btnPaid.Name = "btnPaid";
-            this.btnPaid.Size = new System.Drawing.Size(116, 36);
-            this.btnPaid.TabIndex = 3;
-            this.btnPaid.Text = "Paid";
-            this.btnPaid.UseVisualStyleBackColor = false;
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscount.ForeColor = System.Drawing.Color.Green;
+            this.lblDiscount.Location = new System.Drawing.Point(873, 693);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(96, 25);
+            this.lblDiscount.TabIndex = 11;
+            this.lblDiscount.Text = "Discount : ";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(903, 729);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(63, 25);
+            this.lblTotal.TabIndex = 10;
+            this.lblTotal.Text = "Total : ";
+            // 
+            // lblTotalSubTotal
+            // 
+            this.lblTotalSubTotal.AutoSize = true;
+            this.lblTotalSubTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalSubTotal.Location = new System.Drawing.Point(1085, 643);
+            this.lblTotalSubTotal.Name = "lblTotalSubTotal";
+            this.lblTotalSubTotal.Size = new System.Drawing.Size(52, 25);
+            this.lblTotalSubTotal.TabIndex = 9;
+            this.lblTotalSubTotal.Text = "5000";
+            // 
+            // lblShippingCost
+            // 
+            this.lblShippingCost.AutoSize = true;
+            this.lblShippingCost.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShippingCost.Location = new System.Drawing.Point(1095, 668);
+            this.lblShippingCost.Name = "lblShippingCost";
+            this.lblShippingCost.Size = new System.Drawing.Size(42, 25);
+            this.lblShippingCost.TabIndex = 8;
+            this.lblShippingCost.Text = "300";
+            // 
+            // lblTotalDiscount
+            // 
+            this.lblTotalDiscount.AutoSize = true;
+            this.lblTotalDiscount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDiscount.ForeColor = System.Drawing.Color.Green;
+            this.lblTotalDiscount.Location = new System.Drawing.Point(1095, 693);
+            this.lblTotalDiscount.Name = "lblTotalDiscount";
+            this.lblTotalDiscount.Size = new System.Drawing.Size(42, 25);
+            this.lblTotalDiscount.TabIndex = 7;
+            this.lblTotalDiscount.Text = "100";
+            // 
+            // lblTotalAmount
+            // 
+            this.lblTotalAmount.AutoSize = true;
+            this.lblTotalAmount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAmount.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblTotalAmount.Location = new System.Drawing.Point(1085, 729);
+            this.lblTotalAmount.Name = "lblTotalAmount";
+            this.lblTotalAmount.Size = new System.Drawing.Size(52, 25);
+            this.lblTotalAmount.TabIndex = 6;
+            this.lblTotalAmount.Text = "4500";
+            // 
+            // dgvOrderItems
+            // 
+            this.dgvOrderItems.AllowUserToAddRows = false;
+            this.dgvOrderItems.AllowUserToDeleteRows = false;
+            this.dgvOrderItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrderItems.Location = new System.Drawing.Point(136, 311);
+            this.dgvOrderItems.Name = "dgvOrderItems";
+            this.dgvOrderItems.ReadOnly = true;
+            this.dgvOrderItems.RowHeadersWidth = 62;
+            this.dgvOrderItems.RowTemplate.Height = 28;
+            this.dgvOrderItems.Size = new System.Drawing.Size(1028, 322);
+            this.dgvOrderItems.TabIndex = 2;
             // 
             // panel2
             // 
@@ -174,65 +236,35 @@
             this.panel2.Size = new System.Drawing.Size(1028, 247);
             this.panel2.TabIndex = 1;
             // 
-            // lblName
+            // lblOrderItems
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(20, 57);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(73, 25);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Name : ";
+            this.lblOrderItems.AutoSize = true;
+            this.lblOrderItems.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderItems.Location = new System.Drawing.Point(32, 191);
+            this.lblOrderItems.Name = "lblOrderItems";
+            this.lblOrderItems.Size = new System.Drawing.Size(150, 32);
+            this.lblOrderItems.TabIndex = 8;
+            this.lblOrderItems.Text = "Order Items";
             // 
-            // lblCustomerName
+            // lblAddress
             // 
-            this.lblCustomerName.AutoSize = true;
-            this.lblCustomerName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(165, 57);
-            this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(104, 25);
-            this.lblCustomerName.TabIndex = 1;
-            this.lblCustomerName.Text = "Ajith Kumar";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(676, 88);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(270, 25);
+            this.lblAddress.TabIndex = 8;
+            this.lblAddress.Text = "123 , Shopping Road , Batticaloa";
             // 
-            // lblEmail
+            // lblShipping
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(20, 122);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(68, 25);
-            this.lblEmail.TabIndex = 2;
-            this.lblEmail.Text = "Email : ";
-            // 
-            // lblPaymentMethod
-            // 
-            this.lblPaymentMethod.AutoSize = true;
-            this.lblPaymentMethod.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentMethod.Location = new System.Drawing.Point(496, 57);
-            this.lblPaymentMethod.Name = "lblPaymentMethod";
-            this.lblPaymentMethod.Size = new System.Drawing.Size(170, 25);
-            this.lblPaymentMethod.TabIndex = 3;
-            this.lblPaymentMethod.Text = "Payments Method : ";
-            // 
-            // lblCustomerEmail
-            // 
-            this.lblCustomerEmail.AutoSize = true;
-            this.lblCustomerEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerEmail.Location = new System.Drawing.Point(165, 122);
-            this.lblCustomerEmail.Name = "lblCustomerEmail";
-            this.lblCustomerEmail.Size = new System.Drawing.Size(148, 25);
-            this.lblCustomerEmail.TabIndex = 4;
-            this.lblCustomerEmail.Text = "Ajith@gmail.com";
-            // 
-            // lblCutomerID
-            // 
-            this.lblCutomerID.AutoSize = true;
-            this.lblCutomerID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCutomerID.Location = new System.Drawing.Point(165, 88);
-            this.lblCutomerID.Name = "lblCutomerID";
-            this.lblCutomerID.Size = new System.Drawing.Size(53, 25);
-            this.lblCutomerID.TabIndex = 5;
-            this.lblCutomerID.Text = "C001";
+            this.lblShipping.AutoSize = true;
+            this.lblShipping.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShipping.Location = new System.Drawing.Point(496, 13);
+            this.lblShipping.Name = "lblShipping";
+            this.lblShipping.Size = new System.Drawing.Size(257, 30);
+            this.lblShipping.TabIndex = 4;
+            this.lblShipping.Text = "Shipping and Payments";
             // 
             // lblID
             // 
@@ -295,139 +327,171 @@
             this.lblPhone.TabIndex = 7;
             this.lblPhone.Text = "Phone : ";
             // 
-            // lblShipping
+            // lblCutomerID
             // 
-            this.lblShipping.AutoSize = true;
-            this.lblShipping.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShipping.Location = new System.Drawing.Point(496, 13);
-            this.lblShipping.Name = "lblShipping";
-            this.lblShipping.Size = new System.Drawing.Size(257, 30);
-            this.lblShipping.TabIndex = 4;
-            this.lblShipping.Text = "Shipping and Payments";
+            this.lblCutomerID.AutoSize = true;
+            this.lblCutomerID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCutomerID.Location = new System.Drawing.Point(165, 88);
+            this.lblCutomerID.Name = "lblCutomerID";
+            this.lblCutomerID.Size = new System.Drawing.Size(53, 25);
+            this.lblCutomerID.TabIndex = 5;
+            this.lblCutomerID.Text = "C001";
             // 
-            // lblAddress
+            // lblCustomerEmail
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(676, 88);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(270, 25);
-            this.lblAddress.TabIndex = 8;
-            this.lblAddress.Text = "123 , Shopping Road , Batticaloa";
+            this.lblCustomerEmail.AutoSize = true;
+            this.lblCustomerEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerEmail.Location = new System.Drawing.Point(165, 122);
+            this.lblCustomerEmail.Name = "lblCustomerEmail";
+            this.lblCustomerEmail.Size = new System.Drawing.Size(148, 25);
+            this.lblCustomerEmail.TabIndex = 4;
+            this.lblCustomerEmail.Text = "Ajith@gmail.com";
             // 
-            // lblOrderItems
+            // lblPaymentMethod
             // 
-            this.lblOrderItems.AutoSize = true;
-            this.lblOrderItems.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderItems.Location = new System.Drawing.Point(32, 213);
-            this.lblOrderItems.Name = "lblOrderItems";
-            this.lblOrderItems.Size = new System.Drawing.Size(150, 32);
-            this.lblOrderItems.TabIndex = 8;
-            this.lblOrderItems.Text = "Order Items";
+            this.lblPaymentMethod.AutoSize = true;
+            this.lblPaymentMethod.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaymentMethod.Location = new System.Drawing.Point(496, 57);
+            this.lblPaymentMethod.Name = "lblPaymentMethod";
+            this.lblPaymentMethod.Size = new System.Drawing.Size(170, 25);
+            this.lblPaymentMethod.TabIndex = 3;
+            this.lblPaymentMethod.Text = "Payments Method : ";
             // 
-            // dgvOrderItems
+            // lblEmail
             // 
-            this.dgvOrderItems.AllowUserToAddRows = false;
-            this.dgvOrderItems.AllowUserToDeleteRows = false;
-            this.dgvOrderItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderItems.Location = new System.Drawing.Point(130, 319);
-            this.dgvOrderItems.Name = "dgvOrderItems";
-            this.dgvOrderItems.ReadOnly = true;
-            this.dgvOrderItems.RowHeadersWidth = 62;
-            this.dgvOrderItems.RowTemplate.Height = 28;
-            this.dgvOrderItems.Size = new System.Drawing.Size(1028, 356);
-            this.dgvOrderItems.TabIndex = 2;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(20, 122);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(68, 25);
+            this.lblEmail.TabIndex = 2;
+            this.lblEmail.Text = "Email : ";
             // 
-            // lblTotalAmount
+            // lblCustomerName
             // 
-            this.lblTotalAmount.AutoSize = true;
-            this.lblTotalAmount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmount.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblTotalAmount.Location = new System.Drawing.Point(1048, 780);
-            this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(52, 25);
-            this.lblTotalAmount.TabIndex = 6;
-            this.lblTotalAmount.Text = "4500";
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerName.Location = new System.Drawing.Point(165, 57);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(104, 25);
+            this.lblCustomerName.TabIndex = 1;
+            this.lblCustomerName.Text = "Ajith Kumar";
             // 
-            // lblTotalDiscount
+            // lblName
             // 
-            this.lblTotalDiscount.AutoSize = true;
-            this.lblTotalDiscount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDiscount.ForeColor = System.Drawing.Color.Green;
-            this.lblTotalDiscount.Location = new System.Drawing.Point(1058, 744);
-            this.lblTotalDiscount.Name = "lblTotalDiscount";
-            this.lblTotalDiscount.Size = new System.Drawing.Size(42, 25);
-            this.lblTotalDiscount.TabIndex = 7;
-            this.lblTotalDiscount.Text = "100";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(20, 57);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(73, 25);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Name : ";
             // 
-            // lblShippingCost
+            // panel1
             // 
-            this.lblShippingCost.AutoSize = true;
-            this.lblShippingCost.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShippingCost.Location = new System.Drawing.Point(1058, 719);
-            this.lblShippingCost.Name = "lblShippingCost";
-            this.lblShippingCost.Size = new System.Drawing.Size(42, 25);
-            this.lblShippingCost.TabIndex = 8;
-            this.lblShippingCost.Text = "300";
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.btnPaid);
+            this.panel1.Controls.Add(this.btnDelivered);
+            this.panel1.Controls.Add(this.lblArrow);
+            this.panel1.Controls.Add(this.lblOrderDetails);
+            this.panel1.Location = new System.Drawing.Point(133, 21);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1028, 297);
+            this.panel1.TabIndex = 0;
             // 
-            // lblTotalSubTotal
+            // btnPaid
             // 
-            this.lblTotalSubTotal.AutoSize = true;
-            this.lblTotalSubTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalSubTotal.Location = new System.Drawing.Point(1048, 694);
-            this.lblTotalSubTotal.Name = "lblTotalSubTotal";
-            this.lblTotalSubTotal.Size = new System.Drawing.Size(52, 25);
-            this.lblTotalSubTotal.TabIndex = 9;
-            this.lblTotalSubTotal.Text = "5000";
+            this.btnPaid.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnPaid.FlatAppearance.BorderSize = 0;
+            this.btnPaid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaid.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaid.ForeColor = System.Drawing.Color.White;
+            this.btnPaid.Location = new System.Drawing.Point(881, 6);
+            this.btnPaid.Name = "btnPaid";
+            this.btnPaid.Size = new System.Drawing.Size(116, 36);
+            this.btnPaid.TabIndex = 3;
+            this.btnPaid.Text = "Paid";
+            this.btnPaid.UseVisualStyleBackColor = false;
             // 
-            // lblTotal
+            // btnDelivered
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(866, 780);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(63, 25);
-            this.lblTotal.TabIndex = 10;
-            this.lblTotal.Text = "Total : ";
+            this.btnDelivered.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnDelivered.FlatAppearance.BorderSize = 0;
+            this.btnDelivered.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelivered.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelivered.ForeColor = System.Drawing.Color.White;
+            this.btnDelivered.Location = new System.Drawing.Point(745, 6);
+            this.btnDelivered.Name = "btnDelivered";
+            this.btnDelivered.Size = new System.Drawing.Size(116, 36);
+            this.btnDelivered.TabIndex = 2;
+            this.btnDelivered.Text = "Delivered";
+            this.btnDelivered.UseVisualStyleBackColor = false;
             // 
-            // lblDiscount
+            // lblArrow
             // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.ForeColor = System.Drawing.Color.Green;
-            this.lblDiscount.Location = new System.Drawing.Point(836, 744);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(96, 25);
-            this.lblDiscount.TabIndex = 11;
-            this.lblDiscount.Text = "Discount : ";
+            this.lblArrow.AutoSize = true;
+            this.lblArrow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArrow.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblArrow.Location = new System.Drawing.Point(3, 12);
+            this.lblArrow.Name = "lblArrow";
+            this.lblArrow.Size = new System.Drawing.Size(77, 25);
+            this.lblArrow.TabIndex = 1;
+            this.lblArrow.Text = "⬅ Back";
             // 
-            // lblShippping
+            // lblOrderDetails
             // 
-            this.lblShippping.AutoSize = true;
-            this.lblShippping.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShippping.Location = new System.Drawing.Point(835, 719);
-            this.lblShippping.Name = "lblShippping";
-            this.lblShippping.Size = new System.Drawing.Size(97, 25);
-            this.lblShippping.TabIndex = 12;
-            this.lblShippping.Text = "Shipping : ";
+            this.lblOrderDetails.AutoSize = true;
+            this.lblOrderDetails.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderDetails.Location = new System.Drawing.Point(392, 12);
+            this.lblOrderDetails.Name = "lblOrderDetails";
+            this.lblOrderDetails.Size = new System.Drawing.Size(151, 30);
+            this.lblOrderDetails.TabIndex = 0;
+            this.lblOrderDetails.Text = "Order Details";
             // 
-            // lblSubTotal
+            // cmbProduct
             // 
-            this.lblSubTotal.AutoSize = true;
-            this.lblSubTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubTotal.Location = new System.Drawing.Point(835, 694);
-            this.lblSubTotal.Name = "lblSubTotal";
-            this.lblSubTotal.Size = new System.Drawing.Size(94, 25);
-            this.lblSubTotal.TabIndex = 13;
-            this.lblSubTotal.Text = "SubTotal : ";
+            this.cmbProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProduct.FormattingEnabled = true;
+            this.cmbProduct.Location = new System.Drawing.Point(66, 798);
+            this.cmbProduct.Name = "cmbProduct";
+            this.cmbProduct.Size = new System.Drawing.Size(391, 33);
+            this.cmbProduct.TabIndex = 16;
+            this.cmbProduct.Text = "Select Your Product";
             // 
-            // panel3
+            // textBox1
             // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(840, 774);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(260, 3);
-            this.panel3.TabIndex = 14;
+            this.textBox1.Location = new System.Drawing.Point(66, 846);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(976, 92);
+            this.textBox1.TabIndex = 17;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSubmit.Location = new System.Drawing.Point(1074, 870);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(175, 42);
+            this.btnSubmit.TabIndex = 18;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(513, 798);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(175, 33);
+            this.comboBox1.TabIndex = 19;
+            this.comboBox1.Text = "   Rating ";
             // 
             // UcOrderDetails
             // 
@@ -438,11 +502,11 @@
             this.Size = new System.Drawing.Size(1276, 984);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -481,5 +545,10 @@
         private System.Windows.Forms.Label lblTotalDiscount;
         private System.Windows.Forms.Label lblTotalAmount;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblReview;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbProduct;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

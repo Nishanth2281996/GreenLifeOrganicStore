@@ -197,5 +197,10 @@ namespace GreenLifeOrganicStore.Forms.Admin.Pages
         {
             ClearFields();
         }
+
+        private void dgvCatagories_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

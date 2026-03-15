@@ -13,10 +13,13 @@ namespace GreenLifeOrganicStore.Forms.Customer
 {
     public partial class FrmCustomerMain : Form
     {
-        public FrmCustomerMain()
+        private readonly int customerId;
+        public FrmCustomerMain(int loggedInCustomerId)
         {
             InitializeComponent();
-            OpenCustomerPage(new UcBrowseProducts());
+            customerId = loggedInCustomerId;
+
+            OpenCustomerPage(new UcBrowseProducts(customerId));
 
         }
 
@@ -45,6 +48,12 @@ namespace GreenLifeOrganicStore.Forms.Customer
         {
             //Add Orders User Control for Customer Panel 
             OpenCustomerPage(new UcMyOrders());
+        }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            //Add Orders User Control for Customer Panel 
+            OpenCustomerPage(new UcBrowseProducts(customerId));
         }
     }
 }

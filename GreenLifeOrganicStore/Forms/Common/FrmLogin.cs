@@ -60,7 +60,7 @@ namespace GreenLifeOrganicStore
             //if Customer Role 
             else if(loggedInUser.Role_id == 2)
             {
-                FrmCustomerMain customerForm = new FrmCustomerMain();
+                FrmCustomerMain customerForm = new FrmCustomerMain(loggedInUser.Users_id);
                 customerForm.Show();
                 this.Hide();
             }

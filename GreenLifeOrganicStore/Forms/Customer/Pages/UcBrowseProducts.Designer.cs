@@ -44,7 +44,7 @@
             this.cmbCategory.Size = new System.Drawing.Size(171, 28);
             this.cmbCategory.TabIndex = 1;
             this.cmbCategory.Text = "   All";
-           
+            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
             // 
             // lblCategory
             // 
@@ -78,6 +78,8 @@
             this.txtSearch.Size = new System.Drawing.Size(272, 29);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.Text = " Search Products";
+            this.txtSearch.Click += new System.EventHandler(this.txtSearchProduct_Enter);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearchProduct_TextChanged);
             // 
             // flpProducts
             // 
@@ -87,7 +89,6 @@
             this.flpProducts.Name = "flpProducts";
             this.flpProducts.Size = new System.Drawing.Size(1306, 649);
             this.flpProducts.TabIndex = 2;
-            
             // 
             // UcBrowseProducts
             // 

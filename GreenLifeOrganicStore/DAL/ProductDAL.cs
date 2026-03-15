@@ -264,5 +264,80 @@ namespace GreenLifeOrganicStore.DAL
             }
         }
 
+
+
+
+
+        // Load all active products for customer side ////////////////////////////////////////////////////////////
+        // Load categories for ComboBox
+        // Load customer products with optional category and search filters
+        public DataTable GetFilteredProductsForCustomer(int categoryId, string keyword)
+        {
+            using (SqlConnection conn = dbHelper.GetConnection())
+            {
+                string query = @"SELECT 
+                                    p.Product_id,
+                                    p.Product_Name,
+                                    p.Product_Image_Path,
+                                    p.Stock_Qty,
+                                    p.Unit_Price,
+                                    p.Discount_Percent,
+                                    c.Category_Name,
+                                    c.Category_id,
+                                    ISNULL(AVG(CAST(r.Rating AS DECIMAL(10,2))), 0) AS AvgRating,
+                                    COUNT(r.Review_id) AS ReviewCount
+                                 FROM Products p
+                                 INNER JOIN Category c ON p.Category_id = c.Category_id
+                                 LEFT JOIN Reviews r ON p.Product_id = r.Product_id
+                                 WHERE p.IsActive = 1";
+
+                // Add category filter only if selected category is not All
+                if (categoryId > 0)
+                {
+                    query += " AND p.Category_id = @Category_id";
+                }
+
+                // Add search filter only if keyword is entered
+                if (!string.IsNullOrWhiteSpace(keyword))
+                {
+                    query += " AND p.Product_Name LIKE @Keyword";
+                }
+
+                query += @" GROUP BY 
+                                p.Product_id,
+                                p.Product_Name,
+                                p.Product_Image_Path,
+                                p.Stock_Qty,
+                                p.Unit_Price,
+                                p.Discount_Percent,
+                                c.Category_Name,
+                                c.Category_id
+                            ORDER BY p.Product_id DESC";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Add category parameter when needed
+                    if (categoryId > 0)
+                    {
+                        cmd.Parameters.AddWithValue("@Category_id", categoryId);
+                    }
+
+                    // Add search parameter when needed
+                    if (!string.IsNullOrWhiteSpace(keyword))
+                    {
+                        cmd.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
+                    }
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+                        return table;
+                    }
+                }
+            }
+        }
+
+
     }
 }
