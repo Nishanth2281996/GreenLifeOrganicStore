@@ -123,7 +123,6 @@
             this.panelMonthlyRevenue.Name = "panelMonthlyRevenue";
             this.panelMonthlyRevenue.Size = new System.Drawing.Size(306, 122);
             this.panelMonthlyRevenue.TabIndex = 4;
-            this.panelMonthlyRevenue.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMonthlyRevenue_Paint);
             // 
             // lblTotalMonthlyRevenue
             // 
@@ -296,7 +295,6 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1242, 759);
             this.panelMain.TabIndex = 0;
-            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -326,7 +324,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(615, 310);
             this.panel8.TabIndex = 8;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // lblTotalFeedback
             // 
@@ -338,7 +335,6 @@
             this.lblTotalFeedback.Size = new System.Drawing.Size(177, 32);
             this.lblTotalFeedback.TabIndex = 3;
             this.lblTotalFeedback.Text = "Total Feedback";
-            this.lblTotalFeedback.Click += new System.EventHandler(this.lblTotalFeedback_Click);
             // 
             // chartTotalFeedback
             // 
@@ -357,7 +353,6 @@
             this.chartTotalFeedback.Size = new System.Drawing.Size(615, 310);
             this.chartTotalFeedback.TabIndex = 2;
             this.chartTotalFeedback.Text = "chartTotalFeedback";
-            this.chartTotalFeedback.Click += new System.EventHandler(this.chartTotalFeedback_Click);
             // 
             // panel7
             // 
@@ -409,7 +404,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(615, 309);
             this.panel6.TabIndex = 6;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // lblPendingOrders
             // 
@@ -421,7 +415,6 @@
             this.lblPendingOrders.Size = new System.Drawing.Size(182, 32);
             this.lblPendingOrders.TabIndex = 2;
             this.lblPendingOrders.Text = "Pending Orders";
-            this.lblPendingOrders.Click += new System.EventHandler(this.lblPendingOrders_Click);
             // 
             // chartPendingOrders
             // 
@@ -440,7 +433,6 @@
             this.chartPendingOrders.Size = new System.Drawing.Size(615, 309);
             this.chartPendingOrders.TabIndex = 1;
             this.chartPendingOrders.Text = "chartPendingOrders";
-            this.chartPendingOrders.Click += new System.EventHandler(this.chartPendingOrders_Click);
             // 
             // panel5
             // 
@@ -481,7 +473,6 @@
             this.chartLowStockItems.Size = new System.Drawing.Size(615, 309);
             this.chartLowStockItems.TabIndex = 0;
             this.chartLowStockItems.Text = "chartLowStock";
-            this.chartLowStockItems.Click += new System.EventHandler(this.chartLowStockItems_Click);
             // 
             // UcAdminDashboard
             // 

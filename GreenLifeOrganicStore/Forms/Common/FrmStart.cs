@@ -16,28 +16,18 @@ namespace GreenLifeOrganicStore
         {
             InitializeComponent();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void lblFooter_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            FrmLogin frm = new FrmLogin();
-            frm.Show();
+            //Open Login Form
+            FrmLogin loginFrm = new FrmLogin();
+            loginFrm.Show();
             this.Hide();
         }
-
-        private void btnRegister_Click(object sender, EventArgs e)
+       private void btnRegister_Click(object sender, EventArgs e)
         {
-            FrmRegister frm = new FrmRegister();
-            frm.Show();
+            //Open Register Form
+            FrmRegister registerFrm = new FrmRegister();
+            registerFrm.Show();
             this.Hide();
         }
     }

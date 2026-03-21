@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panelMain = new System.Windows.Forms.Panel();
+            this.cmbRating = new System.Windows.Forms.ComboBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.txtReviewComment = new System.Windows.Forms.TextBox();
+            this.cmbProduct = new System.Windows.Forms.ComboBox();
             this.lblReview = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblSubTotal = new System.Windows.Forms.Label();
@@ -59,12 +63,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPaid = new System.Windows.Forms.Button();
             this.btnDelivered = new System.Windows.Forms.Button();
-            this.lblArrow = new System.Windows.Forms.Label();
             this.lblOrderDetails = new System.Windows.Forms.Label();
-            this.cmbProduct = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,9 +73,9 @@
             // panelMain
             // 
             this.panelMain.AutoScroll = true;
-            this.panelMain.Controls.Add(this.comboBox1);
+            this.panelMain.Controls.Add(this.cmbRating);
             this.panelMain.Controls.Add(this.btnSubmit);
-            this.panelMain.Controls.Add(this.textBox1);
+            this.panelMain.Controls.Add(this.txtReviewComment);
             this.panelMain.Controls.Add(this.cmbProduct);
             this.panelMain.Controls.Add(this.lblReview);
             this.panelMain.Controls.Add(this.panel3);
@@ -97,7 +96,51 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1276, 984);
             this.panelMain.TabIndex = 0;
-            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            
+            // 
+            // cmbRating
+            // 
+            this.cmbRating.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRating.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.cmbRating.FormattingEnabled = true;
+            this.cmbRating.Location = new System.Drawing.Point(513, 798);
+            this.cmbRating.Name = "cmbRating";
+            this.cmbRating.Size = new System.Drawing.Size(175, 33);
+            this.cmbRating.TabIndex = 19;
+            this.cmbRating.Text = "   Rating ";
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSubmit.Location = new System.Drawing.Point(1074, 870);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(175, 42);
+            this.btnSubmit.TabIndex = 18;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmitReview_Click);
+            // 
+            // txtReviewComment
+            // 
+            this.txtReviewComment.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReviewComment.Location = new System.Drawing.Point(66, 846);
+            this.txtReviewComment.Multiline = true;
+            this.txtReviewComment.Name = "txtReviewComment";
+            this.txtReviewComment.Size = new System.Drawing.Size(976, 92);
+            this.txtReviewComment.TabIndex = 17;
+            // 
+            // cmbProduct
+            // 
+            this.cmbProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProduct.FormattingEnabled = true;
+            this.cmbProduct.Location = new System.Drawing.Point(66, 798);
+            this.cmbProduct.Name = "cmbProduct";
+            this.cmbProduct.Size = new System.Drawing.Size(391, 33);
+            this.cmbProduct.TabIndex = 16;
+            this.cmbProduct.Text = "Select Your Product";
             // 
             // lblReview
             // 
@@ -212,6 +255,7 @@
             this.dgvOrderItems.RowTemplate.Height = 28;
             this.dgvOrderItems.Size = new System.Drawing.Size(1028, 322);
             this.dgvOrderItems.TabIndex = 2;
+            
             // 
             // panel2
             // 
@@ -285,7 +329,6 @@
             this.lblCustomerInformation.Size = new System.Drawing.Size(242, 30);
             this.lblCustomerInformation.TabIndex = 3;
             this.lblCustomerInformation.Text = "Customer Information";
-            this.lblCustomerInformation.Click += new System.EventHandler(this.label6_Click);
             // 
             // lblCustomerPhone
             // 
@@ -395,7 +438,6 @@
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.btnPaid);
             this.panel1.Controls.Add(this.btnDelivered);
-            this.panel1.Controls.Add(this.lblArrow);
             this.panel1.Controls.Add(this.lblOrderDetails);
             this.panel1.Location = new System.Drawing.Point(133, 21);
             this.panel1.Name = "panel1";
@@ -430,17 +472,6 @@
             this.btnDelivered.Text = "Delivered";
             this.btnDelivered.UseVisualStyleBackColor = false;
             // 
-            // lblArrow
-            // 
-            this.lblArrow.AutoSize = true;
-            this.lblArrow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArrow.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblArrow.Location = new System.Drawing.Point(3, 12);
-            this.lblArrow.Name = "lblArrow";
-            this.lblArrow.Size = new System.Drawing.Size(77, 25);
-            this.lblArrow.TabIndex = 1;
-            this.lblArrow.Text = "⬅ Back";
-            // 
             // lblOrderDetails
             // 
             this.lblOrderDetails.AutoSize = true;
@@ -450,48 +481,6 @@
             this.lblOrderDetails.Size = new System.Drawing.Size(151, 30);
             this.lblOrderDetails.TabIndex = 0;
             this.lblOrderDetails.Text = "Order Details";
-            // 
-            // cmbProduct
-            // 
-            this.cmbProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbProduct.FormattingEnabled = true;
-            this.cmbProduct.Location = new System.Drawing.Point(66, 798);
-            this.cmbProduct.Name = "cmbProduct";
-            this.cmbProduct.Size = new System.Drawing.Size(391, 33);
-            this.cmbProduct.TabIndex = 16;
-            this.cmbProduct.Text = "Select Your Product";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(66, 846);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(976, 92);
-            this.textBox1.TabIndex = 17;
-            // 
-            // btnSubmit
-            // 
-            this.btnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSubmit.Location = new System.Drawing.Point(1074, 870);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(175, 42);
-            this.btnSubmit.TabIndex = 18;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(513, 798);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 33);
-            this.comboBox1.TabIndex = 19;
-            this.comboBox1.Text = "   Rating ";
             // 
             // UcOrderDetails
             // 
@@ -515,7 +504,6 @@
 
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblArrow;
         private System.Windows.Forms.Label lblOrderDetails;
         private System.Windows.Forms.Button btnDelivered;
         private System.Windows.Forms.Button btnPaid;
@@ -546,9 +534,9 @@
         private System.Windows.Forms.Label lblTotalAmount;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblReview;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtReviewComment;
         private System.Windows.Forms.ComboBox cmbProduct;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbRating;
     }
 }

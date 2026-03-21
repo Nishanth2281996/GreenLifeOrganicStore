@@ -338,6 +338,32 @@ namespace GreenLifeOrganicStore.DAL
             }
         }
 
+        // Load active products for review ComboBox
+        public DataTable GetActiveProductsForReview()
+        {
+            using (SqlConnection conn = dbHelper.GetConnection())
+            {
+                // Load active products only
+                string query = @"
+                    SELECT Product_id, Product_Name
+                    FROM Products
+                    WHERE IsActive = 1
+                    ORDER BY Product_Name ASC";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        // Fill product list into table
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+                        return table;
+                    }
+                }
+            }
+        }
+
+        
 
     }
 }

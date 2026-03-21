@@ -1,14 +1,15 @@
-﻿using System;
+﻿using GreenLifeOrganicStore.Models;
+using GreenLifeOrganicStore.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GreenLifeOrganicStore.Models;
-using GreenLifeOrganicStore.Services;
 
 namespace GreenLifeOrganicStore
 {
@@ -24,20 +25,18 @@ namespace GreenLifeOrganicStore
             InitializeComponent();
         
         }
-  
         private void btnCancel_Click(object sender, EventArgs e)
         {
             //Show login Form 
-            FrmLogin frm = new FrmLogin();
-            frm.Show();
+            FrmLogin LoginFrm = new FrmLogin();
+            LoginFrm.Show();
             this.Hide();
         }
-
         private void lblLogin_Click(object sender, EventArgs e)
         {
             //Show login Form 
-            FrmLogin frm = new FrmLogin();
-            frm.Show();
+            FrmLogin LoginFrm = new FrmLogin();
+            LoginFrm.Show();
             this.Hide();
         }
 
@@ -55,6 +54,12 @@ namespace GreenLifeOrganicStore
             }
         }
 
+        //Validate the Phone Number 
+        private bool IsValidPhoneNumber(string phone)
+        {
+
+            return Regex.IsMatch(phone, @"^\+?\d{10,15}$");
+        }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -62,11 +67,21 @@ namespace GreenLifeOrganicStore
             //Get User inputs from Textboxes
             string fullName = txtFullName.Text.Trim();
             string email = txtEmail.Text.Trim();
-            string phone = txtPhoneNumber.Text.Trim();
+            string phone = txtPhoneNumber.Text.Trim().Replace(" ", "");
             string address = txtAddress.Text.Trim();
             string city = txtCity.Text.Trim();
             string password = txtPassword.Text;
             string confirmPassword = txtConfirmPassword.Text;
+
+            //Check if any field Empty
+            if (string.IsNullOrWhiteSpace(fullName) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(phone) ||
+                string.IsNullOrWhiteSpace(address) || string.IsNullOrWhiteSpace(city) || string.IsNullOrWhiteSpace(password) ||
+                string.IsNullOrWhiteSpace(confirmPassword)
+                )
+            {
+                MessageBox.Show("Please Fill in all Fields", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             //Validate the email address
             if (!IsValidEmail(email))
@@ -78,15 +93,18 @@ namespace GreenLifeOrganicStore
                 return;
             }
 
-            //Check if any field Empty
-            if (string.IsNullOrWhiteSpace(fullName) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(phone) ||
-                string.IsNullOrWhiteSpace(address) || string.IsNullOrWhiteSpace(city) || string.IsNullOrWhiteSpace(password) ||
-                string.IsNullOrWhiteSpace(confirmPassword)
-                )
+            // Validate phone number
+            if (!IsValidPhoneNumber(phone))
             {
-                MessageBox.Show("Please Fill in all Fields", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(
+                    "Please enter a valid phone number.\nExample:\n0771234567 or +94771234567",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
                 return;
             }
+
 
             //Check if password and confirm password match
             if(password != confirmPassword)
@@ -136,14 +154,6 @@ namespace GreenLifeOrganicStore
 
         }
 
-        private void txtFullName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmRegister_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

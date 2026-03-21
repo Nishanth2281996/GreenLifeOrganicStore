@@ -150,7 +150,7 @@
     <Compile Include="DAL\OrderDAL.cs" />
     <Compile Include="DAL\PaymentDAL.cs" />
     <Compile Include="DAL\ProductDAL.cs" />
-    <Compile Include="DAL\ReportDAL.cs" />
+    <Compile Include="DAL\ReviewDAL.cs" />
     <Compile Include="DAL\SupplierDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="Forms\Admin\FrmAdminMain.cs">
@@ -158,24 +158,6 @@
     </Compile>
     <Compile Include="Forms\Admin\FrmAdminMain.Designer.cs">
       <DependentUpon>FrmAdminMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Admin\FrmChangePassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Admin\FrmChangePassword.Designer.cs">
-      <DependentUpon>FrmChangePassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Admin\FrmOrderDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Admin\FrmOrderDetails.Designer.cs">
-      <DependentUpon>FrmOrderDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Admin\FrmProductDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Admin\FrmProductDetails.Designer.cs">
-      <DependentUpon>FrmProductDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Pages\UcAdminCategories.cs">
       <SubType>UserControl</SubType>
@@ -285,16 +267,7 @@
     <Compile Include="Forms\Customer\Pages\UcOrderDetails.Designer.cs">
       <DependentUpon>UcOrderDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Cart.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Discount.cs" />
-    <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\OrderStatus.cs" />
-    <Compile Include="Models\Payment.cs" />
-    <Compile Include="Models\PaymentMethod.cs" />
-    <Compile Include="Models\PaymentStatus.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\Review.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />

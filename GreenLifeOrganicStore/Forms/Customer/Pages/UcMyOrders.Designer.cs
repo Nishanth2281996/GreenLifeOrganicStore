@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.panelMain = new System.Windows.Forms.Panel();
-            this.flpAllOrders = new System.Windows.Forms.FlowLayoutPanel();
+            this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbAllOrders = new System.Windows.Forms.ComboBox();
             this.lblOrderHistory = new System.Windows.Forms.Label();
             this.lblSubtitle = new System.Windows.Forms.Label();
             this.lblMyOrders = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
             // 
-            this.panelMain.Controls.Add(this.flpAllOrders);
+            this.panelMain.Controls.Add(this.dgvOrders);
             this.panelMain.Controls.Add(this.panel1);
             this.panelMain.Controls.Add(this.lblSubtitle);
             this.panelMain.Controls.Add(this.lblMyOrders);
@@ -51,18 +52,27 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1210, 688);
             this.panelMain.TabIndex = 0;
-            
             // 
-            // flpAllOrders
+            // dgvOrders
             // 
-            this.flpAllOrders.AutoScroll = true;
-            this.flpAllOrders.BackColor = System.Drawing.Color.White;
-            this.flpAllOrders.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpAllOrders.Location = new System.Drawing.Point(248, 113);
-            this.flpAllOrders.Name = "flpAllOrders";
-            this.flpAllOrders.Size = new System.Drawing.Size(706, 500);
-            this.flpAllOrders.TabIndex = 3;
-            this.flpAllOrders.WrapContents = false;
+            this.dgvOrders.AllowUserToAddRows = false;
+            this.dgvOrders.AllowUserToDeleteRows = false;
+            this.dgvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrders.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dgvOrders.Location = new System.Drawing.Point(248, 112);
+            this.dgvOrders.MultiSelect = false;
+            this.dgvOrders.Name = "dgvOrders";
+            this.dgvOrders.ReadOnly = true;
+            this.dgvOrders.RowHeadersWidth = 62;
+            this.dgvOrders.RowTemplate.Height = 28;
+            this.dgvOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrders.Size = new System.Drawing.Size(706, 527);
+            this.dgvOrders.TabIndex = 3;
+            this.dgvOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrders_CellDoubleClick);
+            this.dgvOrders.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrders_CellDoubleClick);
             // 
             // panel1
             // 
@@ -84,6 +94,7 @@
             this.cmbAllOrders.Size = new System.Drawing.Size(196, 29);
             this.cmbAllOrders.TabIndex = 3;
             this.cmbAllOrders.Text = " All Orders";
+            this.cmbAllOrders.SelectedIndexChanged += new System.EventHandler(this.cmbAllOrders_SelectedIndexChanged);
             // 
             // lblOrderHistory
             // 
@@ -126,6 +137,7 @@
             this.Size = new System.Drawing.Size(1210, 688);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -139,7 +151,7 @@
         private System.Windows.Forms.Label lblMyOrders;
         private System.Windows.Forms.Label lblOrderHistory;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flpAllOrders;
         private System.Windows.Forms.ComboBox cmbAllOrders;
+        private System.Windows.Forms.DataGridView dgvOrders;
     }
 }

@@ -61,11 +61,6 @@ namespace GreenLifeOrganicStore
             }
         }
 
-        private void FrmForgotPassword_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             FrmLogin loginFrm = new FrmLogin();

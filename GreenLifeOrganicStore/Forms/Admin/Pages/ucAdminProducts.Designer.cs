@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.SplitProducts = new System.Windows.Forms.SplitContainer();
+            this.txtDiscountPercent = new System.Windows.Forms.TextBox();
             this.picProduct = new System.Windows.Forms.PictureBox();
+            this.lblDiscount = new System.Windows.Forms.Label();
             this.btnBrowseImage = new System.Windows.Forms.Button();
             this.txtProductImagePath = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -54,8 +56,6 @@
             this.panelProductList = new System.Windows.Forms.Panel();
             this.txtSearchbox = new System.Windows.Forms.TextBox();
             this.lblProductList = new System.Windows.Forms.Label();
-            this.txtDiscountPercent = new System.Windows.Forms.TextBox();
-            this.lblDiscount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SplitProducts)).BeginInit();
             this.SplitProducts.Panel1.SuspendLayout();
             this.SplitProducts.Panel2.SuspendLayout();
@@ -105,6 +105,16 @@
             this.SplitProducts.SplitterDistance = 300;
             this.SplitProducts.TabIndex = 0;
             // 
+            // txtDiscountPercent
+            // 
+            this.txtDiscountPercent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDiscountPercent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiscountPercent.Location = new System.Drawing.Point(17, 649);
+            this.txtDiscountPercent.Name = "txtDiscountPercent";
+            this.txtDiscountPercent.Size = new System.Drawing.Size(262, 31);
+            this.txtDiscountPercent.TabIndex = 14;
+            this.txtDiscountPercent.Text = "   0";
+            // 
             // picProduct
             // 
             this.picProduct.Location = new System.Drawing.Point(24, 813);
@@ -113,6 +123,16 @@
             this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picProduct.TabIndex = 2;
             this.picProduct.TabStop = false;
+            // 
+            // lblDiscount
+            // 
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscount.Location = new System.Drawing.Point(12, 607);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(121, 25);
+            this.lblDiscount.TabIndex = 13;
+            this.lblDiscount.Text = "Discount (%): ";
             // 
             // btnBrowseImage
             // 
@@ -177,7 +197,7 @@
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(123, 44);
             this.btnNew.TabIndex = 1;
-            this.btnNew.Text = "New";
+            this.btnNew.Text = "Add";
             this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
@@ -203,7 +223,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(123, 44);
             this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Edit";
+            this.btnEdit.Text = "Update";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -393,26 +413,6 @@
             this.lblProductList.Size = new System.Drawing.Size(131, 30);
             this.lblProductList.TabIndex = 1;
             this.lblProductList.Text = "Product List";
-            // 
-            // txtDiscountPercent
-            // 
-            this.txtDiscountPercent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDiscountPercent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiscountPercent.Location = new System.Drawing.Point(17, 649);
-            this.txtDiscountPercent.Name = "txtDiscountPercent";
-            this.txtDiscountPercent.Size = new System.Drawing.Size(262, 31);
-            this.txtDiscountPercent.TabIndex = 14;
-            this.txtDiscountPercent.Text = "   0";
-            // 
-            // lblDiscount
-            // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.Location = new System.Drawing.Point(12, 607);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(121, 25);
-            this.lblDiscount.TabIndex = 13;
-            this.lblDiscount.Text = "Discount (%): ";
             // 
             // UcAdminProducts
             // 

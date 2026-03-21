@@ -20,6 +20,7 @@ namespace GreenLifeOrganicStore.Forms.Admin.Pages
         {
             InitializeComponent();
             LoadDashboardData();
+            LoadCharts();
 
         }
 
@@ -40,57 +41,116 @@ namespace GreenLifeOrganicStore.Forms.Admin.Pages
             }
         }
 
-        private void openAdminPage(UserControl Page , string pageTitle) { }
-
-        private void panelMain_Paint(object sender, PaintEventArgs e)
+        // Load all charts
+        private void LoadCharts()
         {
-
+            try
+            {
+                LoadLowStockChart();
+                LoadPendingOrdersChart();
+                LoadNewCustomersChart();
+                LoadFeedbackChart();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading chart data: " + ex.Message,
+                    "Chart Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
-        private void chartPendingOrders_Click(object sender, EventArgs e)
+        // Load low stock chart
+        private void LoadLowStockChart()
         {
+            DataTable dt = dashboardDAL.GetLowStockChartData();
 
+            chartLowStockItems.Series.Clear();
+
+            Series series = new Series("LowStock");
+            series.ChartType = SeriesChartType.Pie; // Pie chart
+            series.IsValueShownAsLabel = true; // Show values on chart
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string productName = row["Product_Name"].ToString();
+                int stockQty = Convert.ToInt32(row["Stock_Qty"]);
+
+                series.Points.AddXY(productName, stockQty);
+            }
+
+            chartLowStockItems.Series.Add(series);
+            chartLowStockItems.Legends[0].Enabled = true;
         }
 
-        private void chartTotalFeedback_Click(object sender, EventArgs e)
+        // Load pending orders chart
+        private void LoadPendingOrdersChart()
         {
+            DataTable dt = dashboardDAL.GetPendingOrdersChartData();
 
+            chartPendingOrders.Series.Clear();
+
+            Series series = new Series("PendingOrders");
+            series.ChartType = SeriesChartType.Pie; // Pie chart
+            series.IsValueShownAsLabel = true;
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string orderLabel = "Order " + row["Order_id"].ToString();
+                decimal grandTotal = Convert.ToDecimal(row["GrandTotal"]);
+
+                series.Points.AddXY(orderLabel, grandTotal);
+            }
+
+            chartPendingOrders.Series.Add(series);
+            chartPendingOrders.Legends[0].Enabled = true;
         }
 
-        private void lblTotalFeedback_Click(object sender, EventArgs e)
+        // Load new customers chart
+        private void LoadNewCustomersChart()
         {
+            DataTable dt = dashboardDAL.GetNewCustomersChartData();
 
+            chartNewCustomers.Series.Clear();
+
+            Series series = new Series("NewCustomers");
+            series.ChartType = SeriesChartType.Pie; // Pie chart
+            series.IsValueShownAsLabel = true;
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string customerName = row["Full_Name"].ToString();
+
+                // Every customer counts as 1
+                series.Points.AddXY(customerName, 1);
+            }
+
+            chartNewCustomers.Series.Add(series);
+            chartNewCustomers.Legends[0].Enabled = true;
         }
 
-        private void lblPendingOrders_Click(object sender, EventArgs e)
+        // Load feedback chart
+        private void LoadFeedbackChart()
         {
+            DataTable dt = dashboardDAL.GetFeedbackChartData();
 
-        }
+            chartTotalFeedback.Series.Clear();
 
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
+            Series series = new Series("Feedback");
+            series.ChartType = SeriesChartType.Pie; // Pie chart
+            series.IsValueShownAsLabel = true;
 
-        }
+            foreach (DataRow row in dt.Rows)
+            {
+                string ratingLabel = "Rating " + row["Rating"].ToString();
+                int totalReviews = Convert.ToInt32(row["TotalReviews"]);
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
+                series.Points.AddXY(ratingLabel, totalReviews);
+            }
 
-        }
-
-        private void chartLowStockItems_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UcAdminDashboard_Load(object sender, EventArgs e)
-        {
-
-    
-        }
-
-        private void panelMonthlyRevenue_Paint(object sender, PaintEventArgs e)
-        {
-
+            chartTotalFeedback.Series.Add(series);
+            chartTotalFeedback.Legends[0].Enabled = true;
         }
     }
-}
+    }
+

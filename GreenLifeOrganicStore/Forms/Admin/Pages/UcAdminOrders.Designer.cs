@@ -107,13 +107,15 @@
             this.dgvOrders.AllowUserToDeleteRows = false;
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrders.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvOrders.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvOrders.Location = new System.Drawing.Point(0, 56);
             this.dgvOrders.Name = "dgvOrders";
-            this.dgvOrders.ReadOnly = true;
             this.dgvOrders.RowHeadersWidth = 62;
             this.dgvOrders.RowTemplate.Height = 28;
             this.dgvOrders.Size = new System.Drawing.Size(1122, 669);
             this.dgvOrders.TabIndex = 3;
+            this.dgvOrders.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrders_CellValueChanged);
+            this.dgvOrders.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvOrders_CurrentCellDirtyStateChanged);
             // 
             // button1
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panelCard = new System.Windows.Forms.Panel();
             this.lblRegister = new System.Windows.Forms.Label();
             this.lblAccount = new System.Windows.Forms.Label();
@@ -194,6 +195,7 @@
             this.ClientSize = new System.Drawing.Size(1232, 749);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelCard);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

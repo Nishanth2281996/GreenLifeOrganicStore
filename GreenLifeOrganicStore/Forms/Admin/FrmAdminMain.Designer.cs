@@ -71,7 +71,6 @@
             this.panelSidebar.Name = "panelSidebar";
             this.panelSidebar.Size = new System.Drawing.Size(223, 724);
             this.panelSidebar.TabIndex = 0;
-            this.panelSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSidebar_Paint);
             // 
             // btnPayments
             // 
@@ -247,7 +246,6 @@
             this.lblAdminPanel.Size = new System.Drawing.Size(98, 20);
             this.lblAdminPanel.TabIndex = 3;
             this.lblAdminPanel.Text = "Admin Panel";
-            this.lblAdminPanel.Click += new System.EventHandler(this.lblAdminPanel_Click);
             // 
             // lblTitle
             // 
@@ -298,13 +296,13 @@
             this.cmsProfile.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuLogout});
             this.cmsProfile.Name = "cmsProfile";
-            this.cmsProfile.Size = new System.Drawing.Size(241, 69);
+            this.cmsProfile.Size = new System.Drawing.Size(142, 36);
             // 
             // mnuLogout
             // 
             this.mnuLogout.ForeColor = System.Drawing.Color.Red;
             this.mnuLogout.Name = "mnuLogout";
-            this.mnuLogout.Size = new System.Drawing.Size(240, 32);
+            this.mnuLogout.Size = new System.Drawing.Size(141, 32);
             this.mnuLogout.Text = "Logout";
             this.mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
             // 
@@ -319,7 +317,6 @@
             this.lblPageTitle.TabIndex = 0;
             this.lblPageTitle.Text = "Dashboard";
             this.lblPageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPageTitle.Click += new System.EventHandler(this.lblPageTitle_Click);
             // 
             // panelDesktop
             // 
@@ -341,11 +338,11 @@
             this.Controls.Add(this.panelTopbar);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelSidebar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAdminMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdminMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FrmAdminMain_Load);
             this.panelSidebar.ResumeLayout(false);
             this.panelSidebar.PerformLayout();
             this.panel2.ResumeLayout(false);

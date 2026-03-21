@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegister));
             this.lblFullName = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
@@ -82,7 +83,6 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(546, 31);
             this.txtFullName.TabIndex = 2;
-            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             // 
             // txtEmail
             // 
@@ -297,13 +297,11 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(971, 1050);
             this.Controls.Add(this.panelCard);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmRegister";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Text = "FormRegister";
-            this.Load += new System.EventHandler(this.FrmRegister_Load);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.panelCard.ResumeLayout(false);

@@ -69,7 +69,7 @@
             this.lblFooter.Size = new System.Drawing.Size(297, 19);
             this.lblFooter.TabIndex = 5;
             this.lblFooter.Text = "Version 1.0.0 | © 2026 GreenLife Organic Store";
-            this.lblFooter.Click += new System.EventHandler(this.lblFooter_Click);
+            
             // 
             // btnRegister
             // 
@@ -145,7 +145,9 @@
             this.Controls.Add(this.panelCard);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmStart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GreenLife Organic Store";
