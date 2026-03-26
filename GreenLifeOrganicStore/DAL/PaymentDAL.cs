@@ -125,6 +125,48 @@ namespace GreenLifeOrganicStore.DAL
             }
         }
 
+        // Load all payment statuses for combobox
+        public DataTable GetPaymentStatuses()
+        {
+            using (SqlConnection conn = dbHelper.GetConnection())
+            {
+                string query = @"
+                    SELECT Payment_Status_id, Payment_Status_Name
+                    FROM PaymentStatus
+                    ORDER BY Payment_Status_id";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                {
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    return table;
+                }
+            }
+        }
+
+        // Update payment status immediately after combobox change
+        public bool UpdatePaymentStatus(int paymentId, int paymentStatusId)
+        {
+            using (SqlConnection conn = dbHelper.GetConnection())
+            {
+                string query = @"
+                    UPDATE Payment
+                    SET Payment_Status_id = @PaymentStatusId
+                    WHERE Payment_id = @PaymentId";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Parameterized query
+                    cmd.Parameters.AddWithValue("@PaymentStatusId", paymentStatusId);
+                    cmd.Parameters.AddWithValue("@PaymentId", paymentId);
+
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
 
 
         // Helper method to safely convert SQL result to decimal

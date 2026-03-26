@@ -49,6 +49,7 @@ namespace GreenLifeOrganicStore.Forms.Customer.Pages
         {
             // Get selected order details for this customer
             DataTable table = orderDAL.GetCustomerOrderDetails(orderId, customerId);
+            
 
             // Stop if order not found
             if (table.Rows.Count == 0)

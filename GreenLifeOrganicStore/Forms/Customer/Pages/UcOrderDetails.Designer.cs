@@ -43,9 +43,7 @@
             this.lblShippingCost = new System.Windows.Forms.Label();
             this.lblTotalDiscount = new System.Windows.Forms.Label();
             this.lblTotalAmount = new System.Windows.Forms.Label();
-            this.dgvOrderItems = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblOrderItems = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblShipping = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
@@ -65,7 +63,6 @@
             this.btnDelivered = new System.Windows.Forms.Button();
             this.lblOrderDetails = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +84,6 @@
             this.panelMain.Controls.Add(this.lblShippingCost);
             this.panelMain.Controls.Add(this.lblTotalDiscount);
             this.panelMain.Controls.Add(this.lblTotalAmount);
-            this.panelMain.Controls.Add(this.dgvOrderItems);
             this.panelMain.Controls.Add(this.panel2);
             this.panelMain.Controls.Add(this.panel1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -96,14 +92,13 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1276, 984);
             this.panelMain.TabIndex = 0;
-            
             // 
             // cmbRating
             // 
             this.cmbRating.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRating.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.cmbRating.FormattingEnabled = true;
-            this.cmbRating.Location = new System.Drawing.Point(513, 798);
+            this.cmbRating.Location = new System.Drawing.Point(494, 551);
             this.cmbRating.Name = "cmbRating";
             this.cmbRating.Size = new System.Drawing.Size(175, 33);
             this.cmbRating.TabIndex = 19;
@@ -115,7 +110,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSubmit.Location = new System.Drawing.Point(1074, 870);
+            this.btnSubmit.Location = new System.Drawing.Point(1050, 683);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(175, 42);
             this.btnSubmit.TabIndex = 18;
@@ -126,17 +121,17 @@
             // txtReviewComment
             // 
             this.txtReviewComment.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReviewComment.Location = new System.Drawing.Point(66, 846);
+            this.txtReviewComment.Location = new System.Drawing.Point(47, 599);
             this.txtReviewComment.Multiline = true;
             this.txtReviewComment.Name = "txtReviewComment";
-            this.txtReviewComment.Size = new System.Drawing.Size(976, 92);
+            this.txtReviewComment.Size = new System.Drawing.Size(976, 175);
             this.txtReviewComment.TabIndex = 17;
             // 
             // cmbProduct
             // 
             this.cmbProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProduct.FormattingEnabled = true;
-            this.cmbProduct.Location = new System.Drawing.Point(66, 798);
+            this.cmbProduct.Location = new System.Drawing.Point(47, 551);
             this.cmbProduct.Name = "cmbProduct";
             this.cmbProduct.Size = new System.Drawing.Size(391, 33);
             this.cmbProduct.TabIndex = 16;
@@ -146,7 +141,7 @@
             // 
             this.lblReview.AutoSize = true;
             this.lblReview.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReview.Location = new System.Drawing.Point(61, 754);
+            this.lblReview.Location = new System.Drawing.Point(42, 507);
             this.lblReview.Name = "lblReview";
             this.lblReview.Size = new System.Drawing.Size(300, 28);
             this.lblReview.TabIndex = 15;
@@ -155,7 +150,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(877, 723);
+            this.panel3.Location = new System.Drawing.Point(464, 430);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(260, 3);
             this.panel3.TabIndex = 14;
@@ -164,7 +159,7 @@
             // 
             this.lblSubTotal.AutoSize = true;
             this.lblSubTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubTotal.Location = new System.Drawing.Point(872, 643);
+            this.lblSubTotal.Location = new System.Drawing.Point(459, 350);
             this.lblSubTotal.Name = "lblSubTotal";
             this.lblSubTotal.Size = new System.Drawing.Size(94, 25);
             this.lblSubTotal.TabIndex = 13;
@@ -174,7 +169,7 @@
             // 
             this.lblShippping.AutoSize = true;
             this.lblShippping.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShippping.Location = new System.Drawing.Point(872, 668);
+            this.lblShippping.Location = new System.Drawing.Point(459, 375);
             this.lblShippping.Name = "lblShippping";
             this.lblShippping.Size = new System.Drawing.Size(97, 25);
             this.lblShippping.TabIndex = 12;
@@ -185,7 +180,7 @@
             this.lblDiscount.AutoSize = true;
             this.lblDiscount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiscount.ForeColor = System.Drawing.Color.Green;
-            this.lblDiscount.Location = new System.Drawing.Point(873, 693);
+            this.lblDiscount.Location = new System.Drawing.Point(460, 400);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(96, 25);
             this.lblDiscount.TabIndex = 11;
@@ -195,7 +190,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(903, 729);
+            this.lblTotal.Location = new System.Drawing.Point(490, 436);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(63, 25);
             this.lblTotal.TabIndex = 10;
@@ -205,7 +200,7 @@
             // 
             this.lblTotalSubTotal.AutoSize = true;
             this.lblTotalSubTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalSubTotal.Location = new System.Drawing.Point(1085, 643);
+            this.lblTotalSubTotal.Location = new System.Drawing.Point(672, 350);
             this.lblTotalSubTotal.Name = "lblTotalSubTotal";
             this.lblTotalSubTotal.Size = new System.Drawing.Size(52, 25);
             this.lblTotalSubTotal.TabIndex = 9;
@@ -215,7 +210,7 @@
             // 
             this.lblShippingCost.AutoSize = true;
             this.lblShippingCost.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShippingCost.Location = new System.Drawing.Point(1095, 668);
+            this.lblShippingCost.Location = new System.Drawing.Point(682, 375);
             this.lblShippingCost.Name = "lblShippingCost";
             this.lblShippingCost.Size = new System.Drawing.Size(42, 25);
             this.lblShippingCost.TabIndex = 8;
@@ -226,7 +221,7 @@
             this.lblTotalDiscount.AutoSize = true;
             this.lblTotalDiscount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalDiscount.ForeColor = System.Drawing.Color.Green;
-            this.lblTotalDiscount.Location = new System.Drawing.Point(1095, 693);
+            this.lblTotalDiscount.Location = new System.Drawing.Point(682, 400);
             this.lblTotalDiscount.Name = "lblTotalDiscount";
             this.lblTotalDiscount.Size = new System.Drawing.Size(42, 25);
             this.lblTotalDiscount.TabIndex = 7;
@@ -237,30 +232,15 @@
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalAmount.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblTotalAmount.Location = new System.Drawing.Point(1085, 729);
+            this.lblTotalAmount.Location = new System.Drawing.Point(672, 436);
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Size = new System.Drawing.Size(52, 25);
             this.lblTotalAmount.TabIndex = 6;
             this.lblTotalAmount.Text = "4500";
             // 
-            // dgvOrderItems
-            // 
-            this.dgvOrderItems.AllowUserToAddRows = false;
-            this.dgvOrderItems.AllowUserToDeleteRows = false;
-            this.dgvOrderItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderItems.Location = new System.Drawing.Point(136, 311);
-            this.dgvOrderItems.Name = "dgvOrderItems";
-            this.dgvOrderItems.ReadOnly = true;
-            this.dgvOrderItems.RowHeadersWidth = 62;
-            this.dgvOrderItems.RowTemplate.Height = 28;
-            this.dgvOrderItems.Size = new System.Drawing.Size(1028, 322);
-            this.dgvOrderItems.TabIndex = 2;
-            
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblOrderItems);
             this.panel2.Controls.Add(this.lblAddress);
             this.panel2.Controls.Add(this.lblShipping);
             this.panel2.Controls.Add(this.lblID);
@@ -279,16 +259,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1028, 247);
             this.panel2.TabIndex = 1;
-            // 
-            // lblOrderItems
-            // 
-            this.lblOrderItems.AutoSize = true;
-            this.lblOrderItems.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderItems.Location = new System.Drawing.Point(32, 191);
-            this.lblOrderItems.Name = "lblOrderItems";
-            this.lblOrderItems.Size = new System.Drawing.Size(150, 32);
-            this.lblOrderItems.TabIndex = 8;
-            this.lblOrderItems.Text = "Order Items";
             // 
             // lblAddress
             // 
@@ -491,7 +461,6 @@
             this.Size = new System.Drawing.Size(1276, 984);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -521,8 +490,6 @@
         private System.Windows.Forms.Label lblCustomerName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblShipping;
-        private System.Windows.Forms.DataGridView dgvOrderItems;
-        private System.Windows.Forms.Label lblOrderItems;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblSubTotal;
         private System.Windows.Forms.Label lblShippping;

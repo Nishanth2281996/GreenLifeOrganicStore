@@ -31,6 +31,7 @@
             this.panelMain = new System.Windows.Forms.Panel();
             this.dgvPayments = new System.Windows.Forms.DataGridView();
             this.panelPaymentHistory = new System.Windows.Forms.Panel();
+            this.btnDownload = new System.Windows.Forms.Button();
             this.lblPaymentHistory = new System.Windows.Forms.Label();
             this.panelPayment = new System.Windows.Forms.TableLayoutPanel();
             this.panelTotalPayments = new System.Windows.Forms.Panel();
@@ -39,7 +40,6 @@
             this.panelCompletedAmount = new System.Windows.Forms.Panel();
             this.lblCompletedTotalAmount = new System.Windows.Forms.Label();
             this.lblCompletedAmount = new System.Windows.Forms.Label();
-            this.btnDownload = new System.Windows.Forms.Button();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
             this.panelPaymentHistory.SuspendLayout();
@@ -69,11 +69,12 @@
             this.dgvPayments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPayments.Location = new System.Drawing.Point(0, 187);
             this.dgvPayments.Name = "dgvPayments";
-            this.dgvPayments.ReadOnly = true;
             this.dgvPayments.RowHeadersWidth = 62;
             this.dgvPayments.RowTemplate.Height = 28;
             this.dgvPayments.Size = new System.Drawing.Size(1322, 541);
             this.dgvPayments.TabIndex = 4;
+            this.dgvPayments.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPayments_CellValueChanged);
+            this.dgvPayments.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvPayments_CurrentCellDirtyStateChanged);
             // 
             // panelPaymentHistory
             // 
@@ -86,6 +87,20 @@
             this.panelPaymentHistory.Name = "panelPaymentHistory";
             this.panelPaymentHistory.Size = new System.Drawing.Size(1322, 64);
             this.panelPaymentHistory.TabIndex = 3;
+            // 
+            // btnDownload
+            // 
+            this.btnDownload.BackColor = System.Drawing.Color.DarkRed;
+            this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDownload.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnDownload.Location = new System.Drawing.Point(1067, 18);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(124, 36);
+            this.btnDownload.TabIndex = 5;
+            this.btnDownload.Text = "Download";
+            this.btnDownload.UseVisualStyleBackColor = false;
+            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
             // 
             // lblPaymentHistory
             // 
@@ -178,20 +193,6 @@
             this.lblCompletedAmount.Size = new System.Drawing.Size(204, 30);
             this.lblCompletedAmount.TabIndex = 2;
             this.lblCompletedAmount.Text = "Completed Amount";
-            // 
-            // btnDownload
-            // 
-            this.btnDownload.BackColor = System.Drawing.Color.DarkRed;
-            this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDownload.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDownload.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnDownload.Location = new System.Drawing.Point(1067, 18);
-            this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Size = new System.Drawing.Size(124, 36);
-            this.btnDownload.TabIndex = 5;
-            this.btnDownload.Text = "Download";
-            this.btnDownload.UseVisualStyleBackColor = false;
-            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
             // 
             // UcAdminPayments
             // 

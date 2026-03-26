@@ -48,6 +48,9 @@
             this.lblCustomerID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureProfilepic = new System.Windows.Forms.PictureBox();
+            this.btnUploadPhoto = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panelProfileHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfilepic)).BeginInit();
@@ -87,6 +90,7 @@
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit Profile";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lblPersonalInformation
             // 
@@ -101,6 +105,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(this.btnUploadPhoto);
             this.panel1.Controls.Add(this.txtAddress);
             this.panel1.Controls.Add(this.lblAddress);
             this.panel1.Controls.Add(this.txtCity);
@@ -118,23 +125,23 @@
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(180, 178);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(831, 439);
+            this.panel1.Size = new System.Drawing.Size(831, 497);
             this.panel1.TabIndex = 2;
             // 
             // txtAddress
             // 
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddress.Location = new System.Drawing.Point(19, 318);
+            this.txtAddress.Location = new System.Drawing.Point(19, 346);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(790, 79);
             this.txtAddress.TabIndex = 7;
-            this.txtAddress.Text = "No, 21 , Kovil Road , Kallady ,Batticaloa";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(14, 290);
+            this.lblAddress.Location = new System.Drawing.Point(14, 318);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(91, 25);
             this.lblAddress.TabIndex = 6;
@@ -143,16 +150,16 @@
             // txtCity
             // 
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCity.Location = new System.Drawing.Point(435, 221);
+            this.txtCity.Location = new System.Drawing.Point(435, 249);
             this.txtCity.Name = "txtCity";
+            this.txtCity.ReadOnly = true;
             this.txtCity.Size = new System.Drawing.Size(375, 31);
             this.txtCity.TabIndex = 13;
-            this.txtCity.Text = "Batticaloa";
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(430, 193);
+            this.lblCity.Location = new System.Drawing.Point(430, 221);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(56, 25);
             this.lblCity.TabIndex = 12;
@@ -161,16 +168,16 @@
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Location = new System.Drawing.Point(435, 150);
+            this.txtEmail.Location = new System.Drawing.Point(435, 178);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(375, 31);
             this.txtEmail.TabIndex = 11;
-            this.txtEmail.Text = "nishanthmasilamani7@gmail.com";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(430, 122);
+            this.lblEmail.Location = new System.Drawing.Point(430, 150);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(68, 25);
             this.lblEmail.TabIndex = 10;
@@ -179,16 +186,16 @@
             // txtPhone
             // 
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhone.Location = new System.Drawing.Point(18, 223);
+            this.txtPhone.Location = new System.Drawing.Point(18, 251);
             this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(376, 31);
             this.txtPhone.TabIndex = 7;
-            this.txtPhone.Text = "0771233444";
             // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(13, 195);
+            this.lblPhone.Location = new System.Drawing.Point(13, 223);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(76, 25);
             this.lblPhone.TabIndex = 6;
@@ -197,16 +204,17 @@
             // txtFullName
             // 
             this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFullName.Location = new System.Drawing.Point(19, 151);
+            this.txtFullName.Location = new System.Drawing.Point(19, 179);
+            this.txtFullName.Multiline = true;
             this.txtFullName.Name = "txtFullName";
+            this.txtFullName.ReadOnly = true;
             this.txtFullName.Size = new System.Drawing.Size(375, 31);
             this.txtFullName.TabIndex = 5;
-            this.txtFullName.Text = "Nishanth Masilamani";
             // 
             // lblFullName
             // 
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Location = new System.Drawing.Point(14, 123);
+            this.lblFullName.Location = new System.Drawing.Point(14, 151);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(105, 25);
             this.lblFullName.TabIndex = 4;
@@ -252,6 +260,48 @@
             this.pictureProfilepic.TabIndex = 0;
             this.pictureProfilepic.TabStop = false;
             // 
+            // btnUploadPhoto
+            // 
+            this.btnUploadPhoto.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnUploadPhoto.Enabled = false;
+            this.btnUploadPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUploadPhoto.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnUploadPhoto.Location = new System.Drawing.Point(3, 95);
+            this.btnUploadPhoto.Name = "btnUploadPhoto";
+            this.btnUploadPhoto.Size = new System.Drawing.Size(140, 36);
+            this.btnUploadPhoto.TabIndex = 14;
+            this.btnUploadPhoto.Text = "Upload Photo";
+            this.btnUploadPhoto.UseVisualStyleBackColor = false;
+            this.btnUploadPhoto.Click += new System.EventHandler(this.btnUploadPhoto_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSave.Enabled = false;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSave.Location = new System.Drawing.Point(502, 444);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(140, 36);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.SlateGray;
+            this.btnCancel.Enabled = false;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCancel.Location = new System.Drawing.Point(648, 444);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(140, 36);
+            this.btnCancel.TabIndex = 16;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // UcMyProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -293,5 +343,8 @@
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Button btnUploadPhoto;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
     }
 }

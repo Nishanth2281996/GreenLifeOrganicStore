@@ -122,7 +122,7 @@ namespace GreenLifeOrganicStore.Forms.Customer
 
         private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenCustomerPage(new UcMyProfile());
+            OpenCustomerPage(new UcMyProfile(customerId));
         }
     }
 }
